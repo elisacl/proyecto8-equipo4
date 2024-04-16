@@ -1,6 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
-import PaintingsHandlers from '../../handler/PaintingsHandler';
+import ProductHandler from '../../service/ProductService';
 import './card.css'
 
 function CardGallery ({ selectedCategory, selectedSubcategory, product }) {
