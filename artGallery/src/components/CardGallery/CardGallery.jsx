@@ -21,7 +21,9 @@ function CardGallery({ selectedCategory, product }) {
         <div key={index} className="card">
 
           <div className="product-details">
-            <h3 className="product-title">{product.productName}</h3>
+            <div className="product-title">{product.productName}</div>
+            <div>{product.productDescription}</div>
+            <div>{product.productMeasures}</div>
             <div className="price-details">
               <span className="price">{product.productPrice?.monto} {product.productPrice?.moneda}</span>
             </div>
