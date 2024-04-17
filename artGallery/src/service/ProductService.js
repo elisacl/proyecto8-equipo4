@@ -1,50 +1,54 @@
-import ProductService from "../service/ProductService";
+import axios from "axios";
 
-export const ProductHandler = {
-  async getAllProducts() {
-    let allProducts = await ProductService.getAllProducts();
-    return allProducts;
-  },
+const apiClient = axios.create({
+    baseURL: 'http://localhost:3000',
+    withCredentials: false,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json'
+    }
+})
 
-  async getProduct(id) {
-    let product = await ProductService.getProduct(id);
-    return product;
-  },
-
-  async submitProduct(newProduct) {
-    return ProductService.submitProduct(newProduct).then((response) => {
-      if (response.status === 201) {
-        console.log(response.data);
-      } else {
-        throw new Error('Error al enviar el producto');
-      }
-    });
-  },
-
-  async searchProducts(searchTerm) {
-    let allProducts = await ProductService.getAllProducts();
-
-    let filteredProducts = allProducts.filter(product => 
-      product.name.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-
-    return filteredProducts;
- },
-
- async getFilteredProducts(productCategory, productSubcategory) {
-  let allProducts = await ProductService.getProducts();
-
-  if (productCategory) {
-      allProducts = allProducts.filter(product => product.productCategory === productCategory);
-  }
-  if (productSubcategory) {
-      allProducts = allProducts.filter(product => product.productSubcategory === productSubcategory);
-  }
-
-  return allProducts;
-},
-
-
+export const ProductService = {
+    async getProducts() {
+        try {
+            let response = await apiClient.get("/products");
+            let allProducts = response.data;
+            return allProducts;
+        } catch (error) {
+            console.error("Error al obtener los productos:", error);
+        }
+    },
+    async getProduct(id) {
+        try {
+            let response = await apiClient.get("/products/" + id);
+            let product = response.data;
+            return product;
+        } catch (error) {
+            console.error("Error al obtener el producto:", error);
+        }
+    },
+    async submitProduct(newProduct){
+        try {
+            return await apiClient.post("/products", newProduct);
+        } catch (error) {
+            console.error("Error al enviar el producto:", error);
+        }
+    },
+    async deleteProduct(id){
+        try {
+            return await apiClient.delete("/products/" + id);
+        } catch (error) {
+            console.error("Error al eliminar el producto:", error);
+        }
+    },
+    async updateProduct(id, updatedProduct){
+        try {
+            return await apiClient.patch("/products/" + id, updatedProduct);
+        } catch (error) {
+            console.error("Error al actualizar el producto:", error);
+        }
+    }
 }
 
-export default ProductHandler;
+export default ProductService;

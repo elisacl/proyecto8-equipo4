@@ -31,14 +31,11 @@ export const ProductHandler = {
     return filteredProducts;
  },
 
- async getFilteredProducts(productCategory, productSubcategory) {
+ async getFilteredProducts(productCategory) {
   let allProducts = await ProductService.getProducts();
 
   if (productCategory) {
       allProducts = allProducts.filter(product => product.productCategory === productCategory);
-  }
-  if (productSubcategory) {
-      allProducts = allProducts.filter(product => product.productSubcategory === productSubcategory);
   }
 
   return allProducts;

@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import App from './components/App/App';
-import Login from './components/Login/Login';
+import GeneralGallery from './components/Views/GeneralGallery/GeneralGallery';
 
 const router = createBrowserRouter([
   {
@@ -10,8 +10,8 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
-    path: "/GeneralGallery",
-    element: <Login/>,
+    path: "generalgallery",
+    element: <GeneralGallery/>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(

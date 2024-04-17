@@ -19,23 +19,21 @@ function Catalogue() {
                
                 <section className='filters-container'>
                   
-                    <h2 id="filters-title" className="filters-title">nuestras obras</h2>
+                    <h2 id="filters-title" className="filters-title">Nuestras obras</h2>
 
-                   
                     <div className='categories-buttons-container'>
                         <button className={`categories-buttons ${selectedCategory === 'gato' ? 'selected' : ''}`} onClick={() => handleCategoryClick('gato')}>gato</button>
                         <button className={`categories-buttons ${selectedCategory === 'perro' ? 'selected' : ''}`} onClick={() => handleCategoryClick('perro')}>perro</button>
                     </div>
 
-                   
                     <hr className="filters-lines" />
 
                 </section>
 
-               
                 <section>
                     <CardGallery selectedCategory={selectedCategory}/>
                 </section>
+
             </div>
         </div>
     );
