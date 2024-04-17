@@ -45,7 +45,7 @@
     ],
     "products": [
       {
-        "productImage": "/images/digital1.png",
+        "productImage": "/artGallery/public/images/digital1.png",
         "productName": "Obra 1",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
