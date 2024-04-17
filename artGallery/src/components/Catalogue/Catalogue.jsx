@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import CardGallery from '../CardGallery/CardGallery';
+import './catalogue.css';
 
 function Catalogue() {
     const [selectedCategory, setSelectedCategory] = useState('');

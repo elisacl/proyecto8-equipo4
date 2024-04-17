@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import ProductHandler from '../../handler/ProductHandler';
+import './CardGallery.css';
 
 
 function CardGallery({ selectedCategory, product }) {
@@ -29,8 +30,8 @@ function CardGallery({ selectedCategory, product }) {
             </div>
 
             <div className="product-title">{product.productName}</div>
-            <div>{product.productDescription}</div>
-            <div>{product.productMeasures}</div>
+            <div className="product-description">{product.productDescription}</div>
+            <div className="product-measures">{product.productMeasures}</div>
             <div className="price-details">
               <span className="price">{product.productPrice?.monto} {product.productPrice?.moneda}</span>
             </div>
