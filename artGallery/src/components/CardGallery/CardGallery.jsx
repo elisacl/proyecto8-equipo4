@@ -16,7 +16,7 @@ function CardGallery({ selectedCategory, product }) {
 
   return (
     <div className="product-container">
-      {products.map((product, index) => (
+      {products?.map((product, index) => (
 
         <div key={index} className="card">
 
