@@ -45,7 +45,7 @@
     ],
     "products": [
       {
-        "productImage": "/artGallery/public/images/digital1.png",
+        "productImage": "/images/digital1.png",
         "productName": "Obra 1",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
@@ -59,7 +59,7 @@
         "userId": "1"
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/pop1.png",
         "productName": "Obra 2",
         "productDescription": "Óleo en lienzo",
         "productPrice": {
@@ -73,7 +73,7 @@
         "userId": "3"
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/arte-abstracto1.png",
         "productName": "Obra 3",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
@@ -87,7 +87,7 @@
         "userId": "2"
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/expresionismo1.png",
         "productName": "Obra 4",
         "productDescription": "Óleo en lienzo",
         "productPrice": {
@@ -101,7 +101,7 @@
         "userId": "4"
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/digital2.png",
         "productName": "Obra 6",
         "productDescription": "Óleo en lienzo",
         "productPrice": {
@@ -115,7 +115,7 @@
         "userId": "3"
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/pop2.png",
         "productName": "Obra 7",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
@@ -129,7 +129,7 @@
         "userId": "2"
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/arte-abstracto2.png",
         "productName": "Obra 8",
         "productDescription": "Óleo en lienzo",
         "productPrice": {
@@ -143,7 +143,7 @@
         "userId": ""
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/expresionismo2.png",
         "productName": "Obra 9",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
@@ -157,7 +157,7 @@
         "userId": ""
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/digital3.png",
         "productName": "Obra 11",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
@@ -171,7 +171,7 @@
         "userId": ""
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/pop3.png",
         "productName": "Obra 12",
         "productDescription": "Óleo en lienzo",
         "productPrice": {
@@ -185,7 +185,7 @@
         "userId": ""
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/arte-abstracto3.png",
         "productName": "Obra 13",
         "productDescription": "Acrílico en lienzo",
         "productPrice": {
@@ -199,7 +199,7 @@
         "userId": ""
      },
      {
-        "productImage": "/images",
+        "productImage": "/images/expresionismo3.png",
         "productName": "Obra 14",
         "productDescription": "Óleo en lienzo",
         "productPrice": {
@@ -213,7 +213,7 @@
         "userId": ""
      },
      {
-      "productImage": "/images",
+      "productImage": "/images/realismo1.png",
       "productName": "Obra 16",
       "productDescription": "Acrílico en lienzo",
       "productPrice": {
@@ -227,7 +227,7 @@
       "userId": ""
    },
    {
-      "productImage": "/images",
+      "productImage": "/images/realismo2.png",
       "productName": "Obra 17",
       "productDescription": "Óleo en lienzo",
       "productPrice": {
@@ -241,7 +241,7 @@
       "userId": ""
    },
    {
-      "productImage": "/images",
+      "productImage": "/images/realismo3.png",
       "productName": "Obra 18",
       "productDescription": "Acrílico en lienzo",
       "productPrice": {
@@ -254,6 +254,5 @@
       "id": "new18",
       "userId": ""
    }
-
     ]
   }
