@@ -21,6 +21,13 @@ function CardGallery({ selectedCategory, product }) {
         <div key={index} className="card">
 
           <div className="product-details">
+          <div className='product-image-container'>
+              <img
+                src={product.productImage}
+                alt={product.productName}
+              />
+            </div>
+
             <div className="product-title">{product.productName}</div>
             <div>{product.productDescription}</div>
             <div>{product.productMeasures}</div>
