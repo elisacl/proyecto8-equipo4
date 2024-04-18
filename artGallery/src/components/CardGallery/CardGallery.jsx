@@ -35,14 +35,15 @@ function CardGallery({ selectedCategory, product }) {
             <div className="product-measures">{product.productMeasures}</div>
             <div className="price-details">
               <span className="price">{product.productPrice?.monto} {product.productPrice?.moneda}</span>
-            </div>
-          </div>
+                 </div>
 
           <div className="add-to-cart">
             <button className="add-to-cart-button">
-              <img src="artGallery/public/images/Add.svg" id="heart-icon"/>
+              <img src="https://i.postimg.cc/VNjYh4ZK/Add-2x.png" id="add-icon"/>
             </button>
           </div>
+          </div>
+     
 
         </div>
 
@@ -52,3 +53,4 @@ function CardGallery({ selectedCategory, product }) {
 }
 
 export default CardGallery;
+ 
