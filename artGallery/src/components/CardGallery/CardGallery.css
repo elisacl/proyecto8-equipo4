@@ -45,5 +45,8 @@ body {
 .price {
     font-size: 18px;
     font-weight: 300;
+}
+
+.price-details {
     margin-top: 10px;
 }
