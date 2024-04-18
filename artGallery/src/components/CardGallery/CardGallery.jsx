@@ -3,6 +3,7 @@ import ProductHandler from '../../handler/ProductHandler';
 import './CardGallery.css';
 
 
+
 function CardGallery({ selectedCategory, product }) {
   const [products, setProducts] = useState([]);
 
@@ -39,7 +40,7 @@ function CardGallery({ selectedCategory, product }) {
 
           <div className="add-to-cart">
             <button className="add-to-cart-button">
-              <img src="" alt="Añadir al carrito" id="heart-icon"/>
+              <img src="artGallery/public/images/Add.svg" id="heart-icon"/>
             </button>
           </div>
 
