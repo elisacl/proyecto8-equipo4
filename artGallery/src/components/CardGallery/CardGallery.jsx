@@ -39,7 +39,7 @@ function CardGallery({ selectedCategory, product }) {
 
           <div className="add-to-cart">
             <button className="add-to-cart-button">
-              <img src="" alt="Añadir al carrito" id="heart-icon" />
+              <img src="" alt="Añadir al carrito" id="heart-icon"/>
             </button>
           </div>
 
