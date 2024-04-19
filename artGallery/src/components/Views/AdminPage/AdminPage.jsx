@@ -3,6 +3,7 @@ import UsersPage from '../../UsersPage/UsersPage'
 
 const AdminPage = () => {
   return(
+    
         <UsersPage/>
     )
 }

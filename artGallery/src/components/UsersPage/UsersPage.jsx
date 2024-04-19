@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import './UsersPage.css'
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
@@ -91,42 +92,13 @@ const UsersPage = () => {
 
   return (
     <>
-      <h1>Usuarios registrados</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Usuario tipo</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Dato</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{user.ID_User}</td>
-              <td>{user.ID_Usertype}</td>
-              <td>{user.Name}</td>
-              <td>{user.Phone}</td>
-              <td>{user.Email}</td>
-              <td>
-                <button onClick={() => handleEdit(user)}>
-                  Editar
-                </button>
-                <button onClick={() => handleDelete(user)}>
-                  Eliminar
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-
-      <form>
-      
-      <div>
+    <div className='header-usersPage'>
+      <img className='logo-gallery' src="https://i.postimg.cc/pVK9c8tZ/logo1-1.png" alt="logo Galería" />
+      <h1 className='header-h1'>Administrador de usuarios</h1>
+    </div>
+    <form className='form-container'>
+      <h2>registro de usuarios</h2>
+      <div className="form-field">
         <label htmlFor="Name">Name:</label>
         <input
           type="text"
@@ -170,11 +142,12 @@ const UsersPage = () => {
               onChange={handleChange}
               required
             />
+            
          </div>
        
           <div>
             <label htmlFor="Name">ID usertype:</label>
-            <select name="ID_User_Usertype" id="ID_User_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
+            <select className='ID_User_Usertype'name="ID_User_Usertype" id="ID_User_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
               <option value={1} >Administrador</option>
               <option value={2} >Cliente</option>
               <option value={3} >Artista</option>
@@ -182,10 +155,46 @@ const UsersPage = () => {
           </div>
         
        <div style={{padding:"20px"}}>
-          <button type="submit" onClick={handleSubmitCreate}>Añadir Usuario</button>
-          <button type="submit" onClick={handleSubmitUpdate}>Editar Usuario</button>
-       </div>
+          <button type="submit" onClick={handleSubmitCreate} className='form-button'>Añadir Usuario</button>
+          
+          </div>
+    
       </form>
+      <table className='section'>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Usuario tipo</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Dato</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user, index) => (
+            <tr key={index}>
+              <td>{user.ID_User}</td>
+              <td>{user.ID_Usertype}</td>
+              <td>{user.Name}</td>
+              <td>{user.Phone}</td>
+              <td>{user.Email}</td>
+              <td>
+                <button onClick={() => handleEdit(user)}>
+                  Editar
+                </button>
+                <button onClick={() => handleDelete(user)}>
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+        <div style={{padding:"20px"}}>
+         <button type="submit" onClick={handleSubmitUpdate} className='form-button'>Editar Usuario</button>
+      </div>
+      </table>
+     
     </>
   );
 }
