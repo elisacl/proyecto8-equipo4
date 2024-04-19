@@ -1,3 +1,5 @@
+import React, { useContext } from 'react';
+import { CartContext } from '../../contexts/CartContext';
 import { useState, useEffect } from 'react';
 import ProductHandler from '../../handler/ProductHandler';
 import './CardGallery.css';
@@ -7,14 +9,16 @@ import './CardGallery.css';
 function CardGallery({ selectedCategory, product }) {
   const [products, setProducts] = useState([]);
 
-
   useEffect(() => {
     ProductHandler.getFilteredProducts(selectedCategory).then(filteredProducts => {
       setProducts(filteredProducts);
     });
   }, [selectedCategory]);
 
-
+    const { setCart } = useContext(CartContext);
+    const addToCart = () => {
+       setCart(prevCart => [...prevCart, product]);
+    };
 
   return (
     <div className="product-container">
@@ -38,7 +42,7 @@ function CardGallery({ selectedCategory, product }) {
                  </div>
 
           <div className="add-to-cart">
-            <button className="add-to-cart-button">
+            <button onClick={addToCart} className="add-to-cart-button">
               <img src="https://i.postimg.cc/VNjYh4ZK/Add-2x.png" id="add-icon"/>
             </button>
           </div>
