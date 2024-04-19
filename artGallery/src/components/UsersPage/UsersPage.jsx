@@ -15,26 +15,6 @@ const UsersPage = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const handleSubmit = async (e) => {
-  //   try {
-  //     const response = await axios.delete(`http://localhost:5000/adminpage/${formData.ID_User}`);
-  //     console.log(response.data);
-  //     // Actualizar la lista de usuarios después de eliminar uno
-  //     setUsers(users.filter(user => user.ID_User !== formData.ID_User));
-  //     // Limpiar el formulario después de eliminar
-  //     setFormData({
-  //       ID_User_User: "",
-  //       ID_Usertype: "",
-  //       Name: "",
-  //       Phone: "",
-  //       Email: "",
-  //       Password: ""
-  //     });
-  //   } catch (error) {
-  //     console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
-  //   }
-  // };
-
     const handleSubmitCreate = async (e) => {
     e.preventDefault();
     const user = {
