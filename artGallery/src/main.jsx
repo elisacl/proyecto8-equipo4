@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
+// import App from './App.jsx';
 import Product from './components/FormProduct/FormProduct.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -8,3 +9,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Product />
     </React.StrictMode>,
 );
+

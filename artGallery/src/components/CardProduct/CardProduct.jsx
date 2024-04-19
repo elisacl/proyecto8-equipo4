@@ -1,25 +1,25 @@
 import React from "react";
 import "./CardProduct.css";
 
-const CardProduct = ({ product, closeModal }) => {
-  return (
-    <div className="modal">
-      <div className="modal-content">
-        <span className="close" onClick={closeModal}>
-          &times;
-        </span>
-        <h2>{product.name}</h2>
-
-        <img
-          className="image-product"
-          src={product.imageUrl}
-          alt={product.name}
-        />
-        <p>{product.price}</p>
-        {product.description && <p>{product.description}</p>}
-      </div>
-    </div>
-  );
+const CardProduct = ({ product, onEdit, onDelete }) => {
+    return (
+        <div className="product-card">
+            <p>{product.title}</p> 
+            <p>{product.description}</p>
+            <p>{product.dimensions}</p>
+            <p>{product.price}</p>
+            <p>{product.category}</p> 
+            <img
+                className="image-product"
+                src={product.image}
+                alt={product.title} 
+            />
+            <div>
+                <button onClick={onEdit}>Editar</button>
+                <button onClick={onDelete}>Eliminar</button>
+            </div>
+        </div>
+    );
 };
 
 export default CardProduct;

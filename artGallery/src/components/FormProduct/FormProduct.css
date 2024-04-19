@@ -17,6 +17,10 @@
     margin-bottom: 30px;
 }
 
+.form-group.image-group {
+    margin-bottom: 20px;
+}
+
 label {
     display: block;
     margin-bottom: 10px;
@@ -47,5 +51,5 @@ button {
 }
 
 button:hover {
-    background-color: #4b4b4b; /* Cambia el color de fondo al pasar el mouse */
+    background-color: #4b4b4b;
 }
