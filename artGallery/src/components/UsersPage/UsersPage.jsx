@@ -4,7 +4,7 @@ import axios from "axios";
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
   const [formData, setFormData] = useState({
-    ID_User_Usertype: 1,
+    ID_Usertype: 1,
     Name: "",
     Phone: "",
     Email: "",
@@ -38,7 +38,7 @@ const UsersPage = () => {
     const handleSubmitCreate = async (e) => {
     e.preventDefault();
     const user = {
-        ID_Usertype: formData.ID_User_Usertype,
+        ID_Usertype: formData.ID_Usertype,
         Name: formData.Name,
         Phone: formData.Phone,
         Email: formData.Email,
@@ -58,7 +58,7 @@ const UsersPage = () => {
           e.preventDefault();
           const user = {
               ID_User: formData.ID_User,
-              ID_Usertype: formData.ID_User_Usertype,
+              ID_Usertype: formData.ID_Usertype,
               Name: formData.Name,
               Phone: formData.Phone,
               Email: formData.Email,
@@ -77,7 +77,7 @@ const UsersPage = () => {
   const handleEdit = (user) => {
     setFormData({
       ID_User:user.ID_User,
-      ID_User_Usertype: user.ID_Usertype,
+      ID_Usertype: user.ID_Usertype,
       Name: user.Name,
       Phone: user.Phone,
       Email: user.Email,
@@ -194,7 +194,7 @@ const UsersPage = () => {
        
           <div>
             <label htmlFor="Name">ID usertype:</label>
-            <select name="ID_User_Usertype" id="ID_User_Usertype" value={formData.ID_User_Usertype} onChange={handleChange}>
+            <select name="ID_User_Usertype" id="ID_User_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
               <option value={1} >Administrador</option>
               <option value={2} >Cliente</option>
               <option value={3} >Artista</option>
