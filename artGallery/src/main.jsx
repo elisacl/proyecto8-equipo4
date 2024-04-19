@@ -5,7 +5,6 @@ import App from './components/App/App';
 import LoginForm from './components/Login/LoginForm';
 import AdminPage from './components/Views/AdminPage/AdminPage';
 
-import './index.css'
 
 const router = createBrowserRouter([
   {
