@@ -15,7 +15,6 @@ const GeneralGallery = () => {
      <Navbar/>
      <Carousel/>
      <Catalogue/>
-     <button onClick={openModal}>Abrir Carrito</button>
       <Modal isOpen={isOpen} onRequestClose={closeModal}>
         <ShoppingCart/>
         <button onClick={closeModal}>Cerrar</button>
