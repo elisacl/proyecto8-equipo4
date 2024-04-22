@@ -4,7 +4,7 @@ import axios from "axios";
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
   const [formData, setFormData] = useState({
-    ID_Usertype: 1,
+    ID_Usertype: "",
     Name: "",
     Phone: "",
     Email: "",
@@ -174,7 +174,7 @@ const UsersPage = () => {
        
           <div>
             <label htmlFor="Name">ID usertype:</label>
-            <select name="ID_User_Usertype" id="ID_User_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
+            <select name="ID_Usertype" id="ID_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
               <option value={1} >Administrador</option>
               <option value={2} >Cliente</option>
               <option value={3} >Artista</option>

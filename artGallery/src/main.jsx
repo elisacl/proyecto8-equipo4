@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import App from './components/App/App';
-// import './index.css'
+import LoginForm from './components/Login/LoginForm';
 import AdminPage from './components/Views/AdminPage/AdminPage';
+import PersonalGallery from './components/Views/PersonalGallery/PersonalGallery';
 
 const router = createBrowserRouter([
   {
@@ -11,8 +12,16 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
+    path: "/loginform",
+    element: <LoginForm/>,
+  },
+  {
     path: "/adminpage",
     element: <AdminPage/>,
+  },
+  {
+    path: "/personalgallery",
+    element: <PersonalGallery/>,
   },
 ]);
 
