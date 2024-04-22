@@ -8,8 +8,8 @@
   color: black;
   align-items: center;
   background-color: #EBEDEA;
-  width: 98%; /* Modifica el ancho aquí */
-  padding: 15px; /* Añade relleno a los lados para mantener el espacio entre los elementos y los bordes */
+  width: 98%; 
+  padding: 15px; 
 }
 
 .logoGallery {

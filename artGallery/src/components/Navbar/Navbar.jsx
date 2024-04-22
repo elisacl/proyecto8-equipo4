@@ -5,9 +5,10 @@ import Logo from "../img/logoGallery.svg";
 import Cart from "../img/CartIcon.svg";
 import User from "../img/UserIcon.svg";
 import Lupa from "../img/lupa.svg";
+import { useNavigate } from "react-router-dom";
 
-
-function Navbar() {
+function Navbar({ openModal, isLogged}) {
+  const navigate = useNavigate();
 
   return (
 
