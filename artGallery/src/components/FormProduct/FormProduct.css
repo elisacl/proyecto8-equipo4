@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.Form-add-product {
+    width: 400px; 
+    margin: auto;
+    padding: 30px; 
+    border-radius: 5px;
+    font-family: 'Manrope', sans-serif;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.form-group.image-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-input[type="text"],
+textarea,
+.form-select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc; 
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+.button-add-product {
+    width: 50%;
+    padding: 10px; 
+    display: block;
+    margin: 0 auto;
+    background-color: #000000; 
+    color: #fff; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+    margin-top: 20px;
+}
+
+.button-add-product:hover {
+    background-color: #4b4b4b;
+}
