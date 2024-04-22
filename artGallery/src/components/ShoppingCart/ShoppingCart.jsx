@@ -54,7 +54,7 @@ function ShoppingCart() {
             <div className="total-price-container">
               <hr className="line" />
               <div className="total-price-details">
-              <p className="total-price">Total: </p>
+              <p className="total-price-title">Precio total:    </p>
               <p className="total-price">{cart.reduce((total, product) => total + product.productPrice.monto, 0)}€</p>
               </div>
             </div>

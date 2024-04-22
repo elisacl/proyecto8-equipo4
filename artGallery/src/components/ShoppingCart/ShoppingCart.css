@@ -15,7 +15,7 @@
     z-index: 100;
 }
 
-.tu-cesta{
+.tu-cesta {
     font-size: 35px;
     font-weight: 400;
     margin-bottom: 60px
@@ -53,49 +53,71 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    margin: 0px;
+    margin: 5px;
     width: 400px
 }
 
 .painting-title {
     font-size: 14px;
-    margin: 0px
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 0px
 }
 
 .painting-description {
     font-size: 14px;
-    line-height: 150%;
+    font-weight: 200;
     margin: 0px
+    
 }
 
 .painting-price {
     font-size: 14px;
-    margin: 0px
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 0px
 }
 
 .painting-measures {
-    font-size: 12px;
-    margin: 0px
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 15px;
+    margin-top: 20px
 }
 
 .painting-delete-button-and-price-container {
     display: flex;
 }
 
-.painting-delete-button{
+.painting-delete-button {
     background-color: transparent;
     border: none;
     cursor: pointer;
     margin-left: 130px;
 }
 
-.total-price-container{
+.total-price-container {
     width: 400px;
 }
 
-.total-price-details{
+.total-price {
+    margin-left: 20px;
+}
+
+.total-price {
+    margin-left: 20px;
+}
+
+.total-price-details {
+    font-size: 18px;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
     margin: 20px
+}
+
+.line {
+    height: 5px;
+    border: none;
+    background-color: #EBEDEA;
 }
