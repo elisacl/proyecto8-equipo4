@@ -20,7 +20,7 @@ function ShoppingCart() {
       {isOpen && (
         <div className="modal">
           <div className="shopping-card">
-            <h1>Tu cesta</h1>
+            <p className="tu-cesta">Tu cesta</p>
 
             <div className="product-content">
               {cart.map(product => (
@@ -53,8 +53,10 @@ function ShoppingCart() {
 
             <div className="total-price-container">
               <hr className="line" />
+              <div className="total-price-details">
               <p className="total-price">Total: </p>
               <p className="total-price">{cart.reduce((total, product) => total + product.productPrice.monto, 0)}€</p>
+              </div>
             </div>
 
           </div>

@@ -1,7 +1,7 @@
 .shopping-card {
     background-color: white;
-    border: 1px solid #bacdd8;
-    padding: 40px 120px;
+    border: 1px solid #bbbdbe;
+    padding: 40px 140px;
     border-radius: 20px;
     margin: 10px;
     max-width: 300px;
@@ -13,6 +13,12 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+}
+
+.tu-cesta{
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 60px
 }
 
 .product-content {
@@ -83,3 +89,13 @@
     margin-left: 130px;
 }
 
+.total-price-container{
+    width: 400px;
+}
+
+.total-price-details{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin: 20px
+}
