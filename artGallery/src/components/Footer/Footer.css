@@ -37,6 +37,15 @@
     margin-left: 80px; /* Espacio entre los elementos de Contacto y Horario */
 }
 
+.contact-info a {
+    text-decoration: none; /* Elimina la decoración del enlace */
+    color: inherit; /* Usa el color heredado del elemento padre (en este caso, el color del texto) */
+}
+
+.contact-info a:hover {
+    color: #FF9A9A; 
+}
+
 .right-section {
     display: flex;
     margin-right: 15px;
@@ -44,13 +53,36 @@
 
 .social-media {
     display: flex;
-    
 }
 
 .social-media > * {
-    margin-left: 5px; /* Espacio entre los iconos de redes sociales */
-    width: 130px;
+    margin-left: 50px; /* Espacio entre los iconos de redes sociales */
+    margin-right: 40px;
+    width: 60px;
     height: 55px;
+}
+
+.social-media a {
+    text-decoration: none; /* Elimina la decoración del enlace */
+    color: inherit; /* Usa el color heredado del elemento padre (en este caso, el color del texto) */
+    
+}
+
+.social-media a[href*="facebook"]:hover svg {
+    color: #8b9dc3; /* Cambia el color del icono de Facebook al pasar el mouse sobre el enlace */
+}
+
+.social-media a[href*="twitter"]:hover svg {
+    color: #89c9f3; /* Cambia el color del icono de Twitter al pasar el mouse sobre el enlace */
+}
+
+.social-media a[href*="instagram"]:hover svg {
+    color: #ff87b3; /* Cambia el color del icono de Instagram al pasar el mouse sobre el enlace */
+}
+
+.social-media a svg {
+    width: auto; /* Ajusta el tamaño de los iconos de redes sociales al mismo tamaño que el icono de Facebook */
+    height: auto;
 }
 
 .Derechos {

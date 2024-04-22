@@ -11,7 +11,9 @@ const Footer = () => {
                 <div>
                     <h4 className='contact-footer'>Contacto</h4>
                     <div className="contact-info">
-                        <p>123 Calle Principal, Ciudad Arte, AR</p>
+                        <a href="https://maps.app.goo.gl/ULUPipbVHFqfJMq7A" target="_blank" alt="Direction">
+                            <p>123 Calle Principal, Ciudad Arte, AR</p>
+                        </a>
                         <p>+930 778 456</p>
                         <p className="Derechos">© 2024, Gallery ARET - Todos los derechos reservados</p>
                     </div>
@@ -25,12 +27,18 @@ const Footer = () => {
                 </div>
             </div>
             <div className="social-media">
-                <FontAwesomeIcon icon={faFacebook} />
-                <FontAwesomeIcon icon={faTwitter} />
-                <FontAwesomeIcon icon={faInstagram} />
-            </div>
-            
-        </footer>
+                <a href="https://www.facebook.com/?locale=es_ES" target="_blank" alt="Facebook">
+                    <FontAwesomeIcon icon={faFacebook} />
+                </a>
+                <a href="https://twitter.com/home?lang=es" target="_blank" alt="Twitter">
+                    <FontAwesomeIcon icon={faTwitter} />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" alt="Instagram">
+                    <FontAwesomeIcon icon={faInstagram} />
+                </a>
+            </div >
+
+        </footer >
     );
 };
 
