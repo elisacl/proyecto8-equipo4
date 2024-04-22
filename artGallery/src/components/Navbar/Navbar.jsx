@@ -1,13 +1,12 @@
-
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import { CartContext } from '../../contexts/CartContext';
+import { CartContext } from '../contexts/CartContext';
 import './Navbar.css';
 
 function Navbar() {
- const { cart } = useContext(CartContext);
+ const { cart, openModal } = useContext(CartContext);
 
  return (
     <nav className="navbar" style={{ backgroundColor: '#EBEDEA' }}>
@@ -21,10 +20,8 @@ function Navbar() {
       <div className="navbar-right">
         <ul>
           <li>
-            <Link to="/carrito">
-              <FontAwesomeIcon icon={faShoppingCart} />
+            <FontAwesomeIcon icon={faShoppingCart} onClick={openModal} />
               <span>{cart.length}</span> 
-            </Link>
           </li>
           <li><Link to="/login">Log in</Link></li>
         </ul>

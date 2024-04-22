@@ -55,7 +55,7 @@
       "productStock": 3,
       "productCategory": "Arte abstracto",
       "productMeasures": "300x300",
-      "id": "6ac9",
+      "id": "1",
       "userId": "2"
     },
     {
@@ -69,7 +69,7 @@
       "productStock": 4,
       "productCategory": "Expresionismo",
       "productMeasures": "350x350",
-      "id": "4b50",
+      "id": "2",
       "userId": "4"
     },
     {
@@ -83,7 +83,7 @@
       "productStock": 6,
       "productCategory": "Arte digital",
       "productMeasures": "450x450",
-      "id": "c969",
+      "id": "3",
       "userId": "3"
     },
     {
@@ -97,7 +97,7 @@
       "productStock": 18,
       "productCategory": "Realismo contemporáneo",
       "productMeasures": "700x700",
-      "id": "new18",
+      "id": "15",
       "userId": ""
     },
     {
@@ -111,7 +111,7 @@
       "productStock": 8,
       "productCategory": "Arte abstracto",
       "productMeasures": "500x500",
-      "id": "6031",
+      "id": "4",
       "userId": ""
     },
     {
@@ -125,7 +125,7 @@
       "productStock": 1,
       "productCategory": "Arte digital",
       "productMeasures": "200x200",
-      "id": "ffcf",
+      "id": "5",
       "userId": "1"
     },
     {
@@ -139,7 +139,7 @@
       "productStock": 9,
       "productCategory": "Expresionismo",
       "productMeasures": "200x200",
-      "id": "ca82",
+      "id": "6",
       "userId": ""
     },
     {
@@ -153,7 +153,7 @@
       "productStock": 11,
       "productCategory": "Arte digital",
       "productMeasures": "300x300",
-      "id": "be5c",
+      "id": "7",
       "userId": ""
     },
     {
@@ -167,7 +167,7 @@
       "productStock": 17,
       "productCategory": "Realismo contemporáneo",
       "productMeasures": "650x650",
-      "id": "new17",
+      "id": "8",
       "userId": ""
     },
     {
@@ -181,7 +181,7 @@
       "productStock": 7,
       "productCategory": "Neo-pop",
       "productMeasures": "500x500",
-      "id": "abf9",
+      "id": "9",
       "userId": "2"
     },
     {
@@ -195,7 +195,7 @@
       "productStock": 12,
       "productCategory": "Neo-pop",
       "productMeasures": "350x350",
-      "id": "cf78",
+      "id": "10",
       "userId": ""
     },
     {
@@ -209,7 +209,7 @@
       "productStock": 13,
       "productCategory": "Arte abstracto",
       "productMeasures": "400x400",
-      "id": "f90f",
+      "id": "11",
       "userId": ""
     },
     {
@@ -223,7 +223,7 @@
       "productStock": 14,
       "productCategory": "Expresionismo",
       "productMeasures": "450x450",
-      "id": "b4ea",
+      "id": "12",
       "userId": ""
     },
     {
@@ -237,7 +237,7 @@
       "productStock": 16,
       "productCategory": "Realismo contemporáneo",
       "productMeasures": "600x600",
-      "id": "new16",
+      "id": "13",
       "userId": ""
     },
     {
@@ -251,7 +251,7 @@
       "productStock": 2,
       "productCategory": "Neo-pop",
       "productMeasures": "250x250",
-      "id": "6ffa",
+      "id": "14",
       "userId": "3"
     }
   ]
