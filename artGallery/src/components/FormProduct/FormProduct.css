@@ -26,9 +26,9 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"],
+.form-input[type="text"],
 textarea,
-select {
+.form-select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc; 
@@ -36,7 +36,7 @@ select {
     box-sizing: border-box;
 }
 
-button {
+.button-add-product {
     width: 50%;
     padding: 10px; 
     display: block;
@@ -50,6 +50,6 @@ button {
     margin-top: 20px;
 }
 
-button:hover {
+.button-add-product:hover {
     background-color: #4b4b4b;
 }

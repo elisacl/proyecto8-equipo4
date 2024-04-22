@@ -3,9 +3,9 @@ import './FormProduct.css';
 import CardProduct from '../CardProduct/CardProduct';
 import { getAllProducts } from '../../apiUtils.jsx';
 
-const ProductForm = () => {
+const FormProduct = () => {
     const [products, setProducts] = useState([]);
-    const [selectedProductId, setSelectedProductId] = useState(null);
+    // const [selectedProductId, setSelectedProductId] = useState(null);
     const [isEditing, setIsEditing] = useState(false);
     const [formData, setFormData] = useState({
         title: '',
@@ -60,10 +60,15 @@ const ProductForm = () => {
 
     const handleEdit = async (productId) => {
         const productToEdit = products.find((product) => product.id === productId);
-        setFormData(productToEdit);
-        setIsEditing(true);
-        formRef.current.scrollIntoView({ behavior: 'smooth' });
-        setSelectedProductId(productId);
+        const { title, description, dimensions, price, category, image } = productToEdit;
+        setFormData({
+            title: title || '',
+            description: description || '',
+            dimensions: dimensions || '',
+            price: price || '',
+            category: category || '',
+            image: image || '',
+        });
     };
 
     const handleDelete = (productId) => {
@@ -85,7 +90,7 @@ const ProductForm = () => {
                     <h1>Publica tu obra</h1>
                     <div className='form-group'>
                         <label htmlFor="title">Título:</label>
-                        <input
+                        <input className='form-input'
                             type="text"
                             id="title"
                             name="title"
@@ -96,7 +101,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="description">Descripción:</label>
-                        <input
+                        <input className='form-input'
                             type="text"
                             id="description"
                             name="description"
@@ -107,7 +112,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="dimensions">Dimensiones:</label>
-                        <input
+                        <input className='form-input'
                             type="text"
                             id="dimensions"
                             name="dimensions"
@@ -118,7 +123,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="price">Precio:</label>
-                        <input
+                        <input className='form-input'
                             type="text"
                             id="price"
                             name="price"
@@ -132,7 +137,7 @@ const ProductForm = () => {
                     </div>
                     <div className='formgroup'>
                         <label htmlFor="category">Categoría:</label>
-                        <select
+                        <select className='form-select'
                             id="category"
                             name="category"
                             value={formData.category}
@@ -149,7 +154,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="image">Imagen:</label>
-                        <input
+                        <input className='form-input'
                             type="text"
                             id="image"
                             name="image"
@@ -173,7 +178,7 @@ const ProductForm = () => {
 
             <div className="product-list">
                 {products.map((product) => (
-                    <CardProduct
+                    <CardProduct 
                         key={product.id}
                         product={product}
                         onEdit={() => handleEdit(product.id)}
@@ -185,4 +190,4 @@ const ProductForm = () => {
     );
 };
 
-export default ProductForm;
+export default FormProduct;
