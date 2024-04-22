@@ -29,7 +29,7 @@
 .navbar-left ul p {
   display: inline;
   color: black;
-  font-size: x-large;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -44,16 +44,18 @@
   color: black;
 }
 
-.navbar-center ul p {
-  display: inline;
+.navbar-center ul{
+  display:inline-flex;
   margin-left: 20px;
-  font-size: x-large;
+  font-size: 20px;
   font-weight: 400;
   color: black;
+  width: 50px;
 }
 
 .userLogo {
-  width: 40px;
+  width: 50px;
+  margin-right:10px;
 }
 
 .navbar-right {
@@ -72,4 +74,5 @@
 
 .cart {
   width: 13%;
+  margin-right: 80px;
 }

@@ -24,7 +24,6 @@ function Navbar() {
       <div className="navbar-center">
         <ul>
           <img src={User} alt="UserLogo" className="userLogo" />
-          <p className='Login'>Login</p>
         </ul>
       </div>
 
