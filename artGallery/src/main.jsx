@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import App from './components/App/App';
 import LoginForm from './components/Login/LoginForm';
 import AdminPage from './components/Views/AdminPage/AdminPage';
-
+import PersonalGallery from './components/Views/PersonalGallery/PersonalGallery';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "/adminpage",
     element: <AdminPage/>,
+  },
+  {
+    path: "/personalgallery",
+    element: <PersonalGallery/>,
   },
 ]);
 
