@@ -13,6 +13,7 @@ const Footer = () => {
                     <div className="contact-info">
                         <p>123 Calle Principal, Ciudad Arte, AR</p>
                         <p>+930 778 456</p>
+                        <p className="Derechos">© 2024, Gallery ARET - Todos los derechos reservados</p>
                     </div>
                 </div>
                 <div>
@@ -28,6 +29,7 @@ const Footer = () => {
                 <FontAwesomeIcon icon={faTwitter} />
                 <FontAwesomeIcon icon={faInstagram} />
             </div>
+            
         </footer>
     );
 };
@@ -35,4 +37,3 @@ const Footer = () => {
 export default Footer;
 
 
-//© 2024, Gallery ARET - Todos los derechos reservados

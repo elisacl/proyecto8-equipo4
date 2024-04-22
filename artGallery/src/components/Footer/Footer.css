@@ -44,9 +44,15 @@
 
 .social-media {
     display: flex;
+    
 }
 
 .social-media > * {
     margin-left: 5px; /* Espacio entre los iconos de redes sociales */
-    width: 150px;
+    width: 130px;
+    height: 55px;
+}
+
+.Derechos {
+    font-size: small;
 }
