@@ -1,46 +1,85 @@
 .shopping-card {
     background-color: white;
     border: 1px solid #bacdd8;
-    padding: 8px;
-    border-radius: 12px;
+    padding: 40px 120px;
+    border-radius: 20px;
     margin: 10px;
     max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
-   }
-   
-   .shopping-card img {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.product-content {
+    display: flex;
+    flex-wrap: wrap;
+    /* Esto permite que los elementos se envuelvan en varias filas si no hay suficiente espacio en una sola fila */
+    justify-content: space-between;
+    /* Esto distribuye el espacio entre los elementos de manera uniforme */
+}
+
+.product-container {
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: auto;
+    margin-bottom: 70px;
+}
+
+.painting-image-container {
+    flex: 1;
+    /* Asegura que la imagen ocupe el espacio disponible */
+    margin-right: 15px;
+    /* Añade un margen a la derecha de la imagen para separarla de los detalles */
+}
+
+.painting-image {
+    width: 159px;
+    height: 134px;
     object-fit: cover;
-    border-radius: 12px;
-   }
-   
-   .shopping-card h3 {
-    font-size: 24px;
-    font-weight: 600;
-    margin-top: 16px;
-   }
-   
-   .shopping-card p {
+}
+
+.painting-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 400px
+}
+
+.painting-title {
     font-size: 14px;
-    color: #7f8c9b;
+    margin: 0px
+}
+
+.painting-description {
+    font-size: 14px;
     line-height: 150%;
-   }
-   
-   .shopping-card button {
+    margin: 0px
+}
+
+.painting-price {
+    font-size: 14px;
+    margin: 0px
+}
+
+.painting-measures {
+    font-size: 12px;
+    margin: 0px
+}
+
+.painting-delete-button-and-price-container {
+    display: flex;
+}
+
+.painting-delete-button{
+    background-color: transparent;
     border: none;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 600;
-    color: #0077ff;
-    background-color: #e0efff;
-    margin: 10px auto;
-    display: block;
     cursor: pointer;
-   }
-   
-   .shopping-card button:hover {
-    background-color: #c0d8ff;
-   }
+    margin-left: 130px;
+}
+
