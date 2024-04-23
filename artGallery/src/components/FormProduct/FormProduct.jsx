@@ -4,7 +4,7 @@ import './FormProduct.css';
 import axios from "axios";
 
 const ArtisticsPage = () => {
-  const [artistics, setArtistics] = useState([]);
+  const [art, setArt] = useState([]);
   const [formData, setFormData] = useState({
     ID_User: "",
     Title: "",
@@ -34,7 +34,7 @@ const ArtisticsPage = () => {
        await axios.post(`http://localhost:5000/personalgallery/create`, arts);
 
        const response = await axios.get("http://localhost:5000/personalgallery");
-       setArtistics(response.data);
+       setArt(response.data);
     } catch (error) {
       console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
     }
@@ -56,7 +56,7 @@ const ArtisticsPage = () => {
             await axios.put(`http://localhost:5000/personalgallery/update`, arts);
 
             const response = await axios.get("http://localhost:5000/personalgallery");
-            setArtistics(response.data);
+            setArt(response.data);
           } catch (error) {
             console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
           }
@@ -75,23 +75,22 @@ const ArtisticsPage = () => {
     });
   };
 
-  const handleDelete =async (arts) => {
-     const id = arts.ID_Art
-          try {
-            await axios.delete(`http://localhost:5000/personalgallery/remove`, {data: {"ID_Art": id}});
-
-            const response = await axios.get("http://localhost:5000/personalgallery");
-            setArtistics(response.data);
-          } catch (error) {
-            console.error("Error al enviar la solicitud de eliminación al servidor:", error);
-          }
-   };
+  const handleDelete = async (arts) => {
+  const id = arts.ID_Art;
+  try {
+    await axios.delete(`http://localhost:5000/personalgallery/remove`, { data: { "ID_Art": id } });
+    const response = await axios.get("http://localhost:5000/personalgallery");
+    setArt(response.data);
+  } catch (error) {
+    console.error("Error al enviar la solicitud de eliminación al servidor:", error);
+  }
+};
 
   useEffect(() => {
     const fetchAPI = async () => {
       try {
         const response = await axios.get("http://localhost:5000/personalgallery");
-        setArtistics(response.data);
+        setArt(response.data);
       } catch (error) {
         console.error("Error al obtener los datos del servidor:", error);
       }
@@ -180,7 +179,7 @@ const ArtisticsPage = () => {
               <img
                 src={formData.Image}
                 alt="Previsualización de la imagen"
-                style={{ maxWidth: "17%", height: "200px" }}
+                style={{ maxWidth: "50%", height: "200px" }}
               />
             )}
           </div>
@@ -206,17 +205,19 @@ const ArtisticsPage = () => {
       </div>
 
       <div className="product-list">
-        {artistics.map((artistic) => (
-          <div key={artistic.ID_Art}>
-            <p>{artistic.Title}</p>
-            <p>{artistic.Description}</p>
-            <p>{artistic.Measurements}</p>
-            <p>{artistic.Unit_Price}</p>
-            <p>{artistic.Image}</p>
-            <p>{artistic.Stock}</p>
-            <button onClick={() => handleEdit(artistic)}>Editar</button>
-            <button onClick={() => handleDelete(artistic.ID_Art)}>Eliminar</button>
-          </div>
+        {art.map((arts, index) => (
+          <tr key={index}>
+            <td>{arts.Title}</td>
+            <td>{arts.Description}</td>
+            <td>{arts.Measurements}</td>
+            <td>{arts.Unit_Price}</td>
+            <td>{arts.Image}</td>
+            <td>{arts.Stock}</td>
+             <td><button onClick={() => handleEdit(arts)}>Editar</button></td>
+              {arts.ID_Art && (
+            <td><button onClick={() => { console.log(arts.ID_Art); handleDelete(arts); }}>Eliminar</button></td>
+              )}
+          </tr>
         ))}
       </div>
     </div>

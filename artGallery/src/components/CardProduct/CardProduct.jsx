@@ -14,6 +14,7 @@ const CardProduct = ({ onEdit, onDelete }) => {
     Stock: ""
   });
 
+
   useEffect(() => {
     const fetchAPI = async () => {
       try {
@@ -27,31 +28,31 @@ const CardProduct = ({ onEdit, onDelete }) => {
   }, []);
 
     return (
-        <div className="product-card">
-            {art ? (
-                <>
-                    <p>ID del Artículo: {art.ID_Art}</p>
-                    <p>ID del Usuario: {art.ID_User}</p>
-                    <p>Título: {art.Title}</p> 
-                    <p>Descripción: {art.Description}</p>
-                    <p>Dimensiones: {art.Measurements}</p>
-                    <p>Precio: {art.Unit_Price}</p>
-                    {/* <p>Categoría: {product.Category}</p>  */}
-                    <img
-                        className="image-product"
-                        src={art.Image}
-                        alt={art.Title} 
-                    />
-                    <p>Stock: {art.Stock}</p>
-                <div>
-                    <button onClick={onEdit}>Editar</button>
-                    <button onClick={onDelete}>Eliminar</button>
-                </div>
-                </>
-            ) : (
-                <p>Cargando...</p>
-            )}
-        </div>
+        // <div className="product-card">
+        //     {/* {art ? (
+        //         <>
+        //             <p>ID del Artículo: {art.ID_Art}</p>
+        //             <p>ID del Usuario: {art.ID_User}</p>
+        //             <p>Título: {art.Title}</p> 
+        //             <p>Descripción: {art.Description}</p>
+        //             <p>Dimensiones: {art.Measurements}</p>
+        //             <p>Precio: {art.Unit_Price}</p>
+        //             {/* <p>Categoría: {product.Category}</p>  */}
+        //             <img
+        //                 className="image-product"
+        //                 src={art.Image}
+        //                 alt={art.Title} 
+        //             />
+        //             <p>Stock: {art.Stock}</p>
+        //         <div>
+        //             <button onClick={onEdit}>Editar</button>
+        //             <button onClick={onDelete}>Eliminar</button>
+        //         </div>
+        //         </>
+        //     ) : (
+        <p>Cargando...</p>
+        //     )} */}
+        // </div>
     );
 };
 
