@@ -1,39 +1,57 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { CartContext } from '../contexts/CartContext';
 import './ShoppingCart.css';
 
 function ShoppingCart() {
-  const { cart, setCart, isOpen, closeModal } = useContext(CartContext);
+ const { cart, setCart, isOpen, closeModal } = useContext(CartContext);
+ const [showBuyContent, setShowBuyContent] = useState(false); // Nuevo estado para controlar el contenido
 
-  // Función para eliminar un producto del carrito
-  function removeFromCart(productId) {
+ // Función para eliminar un producto del carrito
+ function removeFromCart(productId) {
     setCart(prevCart => prevCart.filter(product => product.id !== productId));
-  }
+ }
 
-  return (
+ // Función para manejar el clic en el botón de comprar
+ function handleBuyClick() {
+    setShowBuyContent(true); // Cambia el estado para mostrar el contenido de compra
+ }
+
+ return (
     <div>
       {isOpen && (
         <div className="modal">
           <div className="shopping-card">
             <button className="close-button" onClick={closeModal}> x </button>
 
-
-            {/* Verifica si el carrito está vacío */}
+            {/* Verifica si el carrito está vacío o si se debe mostrar el contenido de compra */}
             {cart.length === 0 ? (
               <div>
                 <div>
-                  <p className="tu-cesta-empty">Tu cesta está vacía</p>
+                 <p className="tu-cesta-empty">Tu cesta está vacía</p>
                 </div>
                 <div>
-                  <img className="empty-cart" src="/images/empty.png" alt="Descripción de la imagen" />
+                 <img className="empty-cart" src="/images/empty.png" alt="Descripción de la imagen" />
+                </div>
+                <div className="total-price-container">
+                 <hr className="line" />
+                 <div className="see-paintings-button-container">
+                    <button className="generic-button">Ver obras</button>
+                 </div>
                 </div>
               </div>
-
+            ) : showBuyContent ? (
+              <div>
+                <p className="thank-you">¡Gracias por tu compra!</p>
+                <div>
+                 <img className="delivered" src="/images/delivered.png" alt="Descripción de la imagen" />
+                </div>
+                <p className="delivered-message">Tu pedido está en camino...</p>
+              </div>
             ) : (
               <div className="product-content">
                 <p className="tu-cesta">Tu cesta</p>
                 {cart.map(product => (
-                  <div key={product.id} className="product-container">
+                 <div key={product.id} className="product-container">
                     <div className="painting-image-container">
                       <img className="painting-image" src={product.productImage} alt={product.productName} />
                     </div>
@@ -50,24 +68,25 @@ function ShoppingCart() {
                         </button>
                       </div>
                     </div>
-                  </div>
+                 </div>
                 ))}
                 <div className="total-price-container">
-              <hr className="line" />
-              <div className="total-price-details">
-                <p className="total-price-title">Precio total:    </p>
-                <p className="total-price">{cart.reduce((total, product) => total + product.productPrice.monto, 0)}€</p>
-              </div>
-            </div>
+                 <hr className="line" />
+                 <div className="total-price-details">
+                    <p className="total-price-title">Precio total:    </p>
+                    <p className="total-price">{cart.reduce((total, product) => total + product.productPrice.monto, 0)}€</p>
+                 </div>
+                </div>
+                <div className="buy-button-container">
+                 <button className="generic-button" id="buy-button" onClick={handleBuyClick}>Comprar</button>
+                </div>
               </div>
             )}
-
-            
           </div>
         </div>
       )}
     </div>
-  );
+ );
 }
 
 export default ShoppingCart;
