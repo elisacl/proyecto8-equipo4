@@ -103,7 +103,7 @@ const UsersPage = () => {
       <div className='form-content'>
       <div className="form-field">
         <label htmlFor="Name">Name:</label>
-        <input
+        <input className='input-name'
           type="text"
           id="Name"
           name="Name"
@@ -114,7 +114,7 @@ const UsersPage = () => {
       </div>
        <div>
         <label htmlFor="Email">Correo Electrónico:</label>
-        <input
+        <input className='input-email'
           type="Email"
           id="Email"
           name="Email"
@@ -125,7 +125,7 @@ const UsersPage = () => {
        </div>
          <div>
            <label htmlFor="Email">Teléfono:</label>
-            <input
+            <input className='input-phone'
               type="Phone"
               id="Phone"
               name="Phone"
@@ -137,7 +137,7 @@ const UsersPage = () => {
 
          <div>
             <label htmlFor="Password">Contraseña:</label>
-            <input
+            <input className='input-pass'
               type="number"
               id="Password"
               name="Password"
@@ -164,7 +164,7 @@ const UsersPage = () => {
           </div>
           </div>
       </form>
-      <table className='section'>
+      <table className='section-userpage'>
         <thead>
           <tr>
             <th>ID</th>
