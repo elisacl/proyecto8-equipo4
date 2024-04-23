@@ -24,9 +24,9 @@
 label {
     display: block;
     margin-bottom: 10px;
-}
+} 
 
-.form-input[type="text"],[type="number"],
+.form-input[type="text"],
 textarea,
 .form-select {
     width: 100%;
