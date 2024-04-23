@@ -1,193 +1,226 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import './FormProduct.css';
-import CardProduct from '../CardProduct/CardProduct';
-import { getAllProducts } from '../../apiUtils.jsx';
+// import CardProduct from '../CardProduct/CardProduct';
+import axios from "axios";
 
-const FormProduct = () => {
-    const [products, setProducts] = useState([]);
-    // const [selectedProductId, setSelectedProductId] = useState(null);
-    const [isEditing, setIsEditing] = useState(false);
-    const [formData, setFormData] = useState({
-        title: '',
-        description: '',
-        dimensions: '',
-        price: '',
-        category: '',
-        image: '',
+const ArtisticsPage = () => {
+  const [artistics, setArtistics] = useState([]);
+  const [formData, setFormData] = useState({
+    ID_User: "",
+    Title: "",
+    Description: "",
+    Measurements: "",
+    Unit_Price: "",
+    Image: "",
+    Stock: ""
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+    const handleSubmitCreate = async (e) => {
+    e.preventDefault();
+    const arts = {
+        ID_User: formData.ID_User,
+        Title: formData.Title,
+        Description: formData.Description,
+        Measurements: formData.Measurements,
+        Unit_Price: formData.Unit_Price,
+        Image: formData.Image,
+        Stock: formData.Stock
+      }
+    try {
+       await axios.post(`http://localhost:5000/personalgallery/create`, arts);
+
+       const response = await axios.get("http://localhost:5000/personalgallery");
+       setArtistics(response.data);
+    } catch (error) {
+      console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
+    }
+  };
+
+    const handleSubmitUpdate = async (e) => {
+          e.preventDefault();
+        const arts = {
+            ID_Art: formData.ID_Art,
+            ID_User: formData.ID_User,
+            Title: formData.Title,
+            Description: formData.Description,
+            Measurements: formData.Measurements,
+            Unit_Price: formData.Unit_Price,
+            Image: formData.Image,
+            Stock: formData.Stock
+         }
+          try {
+            await axios.put(`http://localhost:5000/personalgallery/update`, arts);
+
+            const response = await axios.get("http://localhost:5000/personalgallery");
+            setArtistics(response.data);
+          } catch (error) {
+            console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
+          }
+     };
+
+  const handleEdit = (arts) => {
+    setFormData({
+      ID_Art:arts.ID_Art,
+      ID_User: arts.ID_User,
+      Title: arts.Title,
+      Description: arts.Description,
+      Measurements: arts.Measurements,
+      Unit_Price: arts.Unit_Price,
+      Image: arts.Image,
+      Stock: arts.Stock
     });
-    const formRef = useRef(null);
+  };
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+  const handleDelete =async (arts) => {
+     const id = arts.ID_Art
+          try {
+            await axios.delete(`http://localhost:5000/personalgallery/remove`, {data: {"ID_Art": id}});
 
-    const fetchData = async () => {
-        try {
-            const productsData = await getAllProducts();
-            setProducts(productsData);
-        } catch (error) {
-            console.error('Error al obtener las obras:', error);
-        }
+            const response = await axios.get("http://localhost:5000/personalgallery");
+            setArtistics(response.data);
+          } catch (error) {
+            console.error("Error al enviar la solicitud de eliminación al servidor:", error);
+          }
+   };
+
+  useEffect(() => {
+    const fetchAPI = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/personalgallery");
+        setArtistics(response.data);
+      } catch (error) {
+        console.error("Error al obtener los datos del servidor:", error);
+      }
     };
+    fetchAPI();
+  }, []);
 
-    const handleChange = (event) => {
-        const { name, value } = event.target;
-        setFormData({ ...formData, [name]: value });
-    };
+  return (
+    <div>
+      <div className='add-product'>
+        <form className='Form-add-product' onSubmit={handleSubmitCreate}>
+          <h1>Publica tu obra</h1>
+          <div className='form-group'>
+            <label htmlFor="ID_User">Artista:</label>
+            <input
+              className='form-input'
+              type="number"
+              id="ID_User"
+              name="ID_User"
+              value={formData.ID_User}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="title">Título:</label>
+            <input
+              className='form-input'
+              type="text"
+              id="title"
+              name="Title"
+              value={formData.Title}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className='form-group'>
+            <label htmlFor="description">Descripción:</label>
+            <input
+              className='form-input'
+              type="text"
+              id="description"
+              name="Description"
+              value={formData.Description}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className='form-group'>
+            <label htmlFor="measurements">Dimensiones:</label>
+            <input
+              className='form-input'
+              type="text"
+              id="measurements"
+              name="Measurements"
+              value={formData.Measurements}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className='form-group'>
+            <label htmlFor="price">Precio:</label>
+            <input
+              className='form-input'
+              type="text"
+              id="price"
+              name="Unit_Price"
+              value={formData.Unit_Price}
+              onChange={handleChange}
+              inputMode='numeric'
+              pattern='[0-9]*'
+              placeholder='0.00'
+              required
+            />
+          </div>
+          <div className='form-group'>
+            <label htmlFor="image">Imagen:</label>
+            <input
+              className='form-input'
+              type="text"
+              id="image"
+              name="Image"
+              value={formData.Image}
+              onChange={handleChange}
+              required
+            />
+            {formData.Image && (
+              <img
+                src={formData.Image}
+                alt="Previsualización de la imagen"
+                style={{ maxWidth: "17%", height: "200px" }}
+              />
+            )}
+          </div>
+          <div className='form-group'>
+            <label htmlFor="stock">Stock:</label>
+            <input
+              className='form-input'
+              type="text"
+              id="stock"
+              name="Stock"
+              value={formData.Stock}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <button className='button-add-product' type="submit" onClick={handleSubmitCreate}>
+            Agregar obra
+          </button>
+           <button className='button-add-product' type="submit" onClick={handleSubmitUpdate}>
+            Editar obra
+          </button>
+        </form>
+      </div>
 
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            if (isEditing) {
-                // Aquí va la lógica para actualizar la obra
-            } else {
-                // Aquí la lógica para agregar la obra
-            }
-            setFormData({
-                title: '',
-                description: '',
-                dimensions: '',
-                price: '',
-                category: '',
-                image: '',
-            });
-            setIsEditing(false);
-            fetchData();
-        } catch (error) {
-            console.error('Error al guardar la obra:', error);
-        }
-    };
-
-    const handleEdit = async (productId) => {
-        const productToEdit = products.find((product) => product.id === productId);
-        const { title, description, dimensions, price, category, image } = productToEdit;
-        setFormData({
-            title: title || '',
-            description: description || '',
-            dimensions: dimensions || '',
-            price: price || '',
-            category: category || '',
-            image: image || '',
-        });
-    };
-
-    const handleDelete = (productId) => {
-        try {
-            const updatedProducts = products.filter(product => product.id !== productId);
-            setProducts(updatedProducts);
-            alert('Obra eliminada exitosamente');
-        } catch (error) {
-            console.error('Error al eliminar la obra:', error);
-        }
-    };
-
-    const categories = ['Arte abstracto', 'Realismo contemporáneo', 'Expresionismo', 'Arte digital', 'Neo-pop'];
-
-    return (
-        <div>
-            <div className='add-product'>
-                <form className='Form-add-product' ref={formRef} onSubmit={handleSubmit}>
-                    <h1>Publica tu obra</h1>
-                    <div className='form-group'>
-                        <label htmlFor="title">Título:</label>
-                        <input className='form-input'
-                            type="text"
-                            id="title"
-                            name="title"
-                            value={formData.title}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <label htmlFor="description">Descripción:</label>
-                        <input className='form-input'
-                            type="text"
-                            id="description"
-                            name="description"
-                            value={formData.description}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <label htmlFor="dimensions">Dimensiones:</label>
-                        <input className='form-input'
-                            type="text"
-                            id="dimensions"
-                            name="dimensions"
-                            value={formData.dimensions}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className='form-group'>
-                        <label htmlFor="price">Precio:</label>
-                        <input className='form-input'
-                            type="text"
-                            id="price"
-                            name="price"
-                            value={formData.price}
-                            onChange={handleChange}
-                            inputMode='numeric'
-                            pattern='[0-9]*'
-                            placeholder='0.00'
-                            required
-                        />
-                    </div>
-                    <div className='formgroup'>
-                        <label htmlFor="category">Categoría:</label>
-                        <select className='form-select'
-                            id="category"
-                            name="category"
-                            value={formData.category}
-                            onChange={handleChange}
-                            required
-                        >
-                            <option value="">Selecciona una categoría</option>
-                            {categories.map((category) => (
-                                <option key={category} value={category}>
-                                    {category}
-                                </option>
-                            ))}
-                        </select>
-                    </div>
-                    <div className='form-group'>
-                        <label htmlFor="image">Imagen:</label>
-                        <input className='form-input'
-                            type="text"
-                            id="image"
-                            name="image"
-                            value={formData.image}
-                            onChange={handleChange}
-                            required
-                        />
-                        {formData.image && (
-                            <img
-                                src={formData.image}
-                                alt="Previsualización de la imagen"
-                                style={{ maxWidth: "17%", height: "200px" }}
-                            />
-                        )}
-                    </div>
-                    <button className='button-add-product' type="submit">
-                        {isEditing ? "Actualizar obra" : "Agregar obra"}
-                    </button>
-                </form>
-            </div>
-
-            <div className="product-list">
-                {products.map((product) => (
-                    <CardProduct 
-                        key={product.id}
-                        product={product}
-                        onEdit={() => handleEdit(product.id)}
-                        onDelete={() => handleDelete(product.id)}
-                    />
-                ))}
-            </div>
-        </div>
-    );
+      <div className="product-list">
+        {artistics.map((artistic) => (
+          <div key={artistic.ID_Art}>
+            <p>{artistic.Title}</p>
+            <p>{artistic.Description}</p>
+            <p>{artistic.Measurements}</p>
+            <p>{artistic.Unit_Price}</p>
+            <p>{artistic.Image}</p>
+            <p>{artistic.Stock}</p>
+            <button onClick={() => handleEdit(artistic)}>Editar</button>
+            <button onClick={() => handleDelete(artistic.ID_Art)}>Eliminar</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default FormProduct;
+export default ArtisticsPage;

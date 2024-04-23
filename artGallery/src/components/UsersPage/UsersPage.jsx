@@ -50,7 +50,7 @@ const UsersPage = () => {
             const response = await axios.get("http://localhost:5000/adminpage");
             setUsers(response.data);
           } catch (error) {
-            console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
+            console.error("Error al enviar la solicitud de eliminación al servidor:", error);
           }
      };
 
@@ -73,7 +73,7 @@ const UsersPage = () => {
             const response = await axios.get("http://localhost:5000/adminpage");
             setUsers(response.data);
           } catch (error) {
-            console.error("Error al enviar la solicitud de eliminación al servID_Useror:", error);
+            console.error("Error al enviar la solicitud de eliminación al servidor:", error);
           }
    };
 
