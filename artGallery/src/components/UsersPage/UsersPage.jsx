@@ -92,12 +92,15 @@ const UsersPage = () => {
 
   return (
     <>
+    
     <div className='header-usersPage'>
       <img className='logo-gallery' src="https://i.postimg.cc/pVK9c8tZ/logo1-1.png" alt="logo Galería" />
       <h1 className='header-h1'>Administrador de usuarios</h1>
     </div>
+    <div className='tables-page'>
     <form className='form-container'>
-      <h2>registro de usuarios</h2>
+      <h2 className='title-register'>Registro de usuarios</h2>
+      <div className='form-content'>
       <div className="form-field">
         <label htmlFor="Name">Name:</label>
         <input
@@ -133,7 +136,7 @@ const UsersPage = () => {
           </div>
 
          <div>
-            <label htmlFor="Password">Contrasena:</label>
+            <label htmlFor="Password">Contraseña:</label>
             <input
               type="number"
               id="Password"
@@ -154,11 +157,11 @@ const UsersPage = () => {
             </select>
           </div>
         
-       <div style={{padding:"20px"}}>
+       <div className='button-form' style={{padding:"20px"}}>
           <button type="submit" onClick={handleSubmitCreate} className='form-button'>Añadir Usuario</button>
           
           </div>
-    
+          </div>
       </form>
       <table className='section'>
         <thead>
@@ -179,22 +182,26 @@ const UsersPage = () => {
               <td>{user.Name}</td>
               <td>{user.Phone}</td>
               <td>{user.Email}</td>
-              <td>
-                <button onClick={() => handleEdit(user)}>
-                  Editar
-                </button>
-                <button onClick={() => handleDelete(user)}>
-                  Eliminar
-                </button>
-              </td>
+              
+
             </tr>
           ))}
+          
         </tbody>
         <div style={{padding:"20px"}}>
          <button type="submit" onClick={handleSubmitUpdate} className='form-button'>Editar Usuario</button>
-      </div>
+      </div><td>
+  <div className="action-buttons">
+    <button className='form-button' onClick={() => handleEdit(user)}>
+      Editar
+    </button>
+    <button className='form-button'  onClick={() => handleDelete(user)}>
+      Eliminar
+    </button>
+  </div>
+</td>
       </table>
-     
+      </div>
     </>
   );
 }

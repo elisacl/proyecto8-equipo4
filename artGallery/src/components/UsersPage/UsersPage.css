@@ -134,7 +134,7 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 20px;
-  font-size:larger
+  font-size:larger;
 }
 
 .header {
@@ -145,11 +145,13 @@ body {
 }
 
 .section {
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 5px solid #DFE3DE;
+  border-radius: 25px;
   padding: 20px;
   margin-bottom: 20px;
-  width: 45%;
+  width: 200%;
+  margin-top: 50px;
+  margin-left: 200px;
 }
 
 .section-title {
@@ -161,17 +163,29 @@ body {
 .section-content {
   font-size: 14px;
   color: #666;
+  display: flex;
+  text-align: center;
+  justify-content: flex-end; /* Alinea el botón de editar a la derecha */
 }
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
 
 .form-container {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  width: 100%;
-  padding: 20px;
+  margin: 30px;
+  border:none;
+  border-radius: 40px;
+  width: 1000px;
+  background-color: #EBEDEA;
+  margin: auto; 
+  padding: 30px;
 }
-
-
-
+.table-container {
+    margin-left: auto;
+  }
 .form-button {
   background-color: #000000;
   color: white;
@@ -181,11 +195,19 @@ body {
   cursor: pointer;
   width: 50%;
 }
+.form-content{
+    margin-left: 65px;
+    margin-top: 20px;
+    
+}
 input  {
     border-radius: 25px;
     padding: 5px;
     margin: 10px;
+    display:flex;
+    align-items:end;
 }
+
 .ID_User_Usertype{
     border-radius: 25px;
     padding: 5px;
@@ -194,10 +216,16 @@ input  {
 }
 
 .form-button:hover {
-  background-color: #EBEDEA;
+  background-color: #cccbcb;
   color: #000000;
+  
 }
+.button-form{
+    margin-left: 20px;
+    width: 100%;
+    min-width: 100%;
 
+}
 .logo-gallery {
   margin: 150px;
 }
@@ -209,4 +237,29 @@ input  {
 .header-h1 {
   display: flex;
   align-items: center;
+  margin-left: 120px;
 }
+
+.form-field{
+    align-items:center;
+}
+.title-register{
+    align-items: center;
+    margin-left: 25px;
+    
+}
+.tables-page {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+@media screen and (max-width: 768px) {
+    .header-h1 {
+        display: flex;
+        align-items: center;
+    
+      }
+    .section{
+        
+    }
+  }
