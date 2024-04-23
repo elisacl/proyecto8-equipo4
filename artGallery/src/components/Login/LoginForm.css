@@ -71,26 +71,25 @@
   #btn_log{
     margin-top: 10px;
     margin-left: -64%;
-    font-family: 'Manrope', sans-serif; /* Asegúrate de que la fuente Manrope esté disponible en tu proyecto */
-    background-color: black; /* Fondo negro */
-    color: white; /* Texto blanco */
-    border: none; /* Sin bordes */
-    border-radius: 40px; /* Bordes redondeados de 20px */
-    padding: 10px 20px; /* Espaciado interno */
-    text-align: center; /* Alineación del texto al centro */
-    text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Permite el uso de propiedades como padding y border-radius */
-    cursor: pointer; /* Cambia el cursor al pasar el mouse */
-    width: 100px; /* Ancho del botón */
-    height: 40px; /* Alto del botón */
-    font-size: 14px; /* Tamaño del texto */
-    transition: background-color 0s; /* Transición instantánea al cambiar el color de fondo */
-    /* margin: 40px 0px 30px 120px */
+    font-family: 'Manrope', sans-serif; 
+    background-color: black;
+    color: white; 
+    border: none;
+    border-radius: 40px; 
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none; 
+    display: inline-block; 
+    cursor: pointer; 
+    width: 100px; 
+    height: 40px;
+    font-size: 14px; 
+    transition: background-color 0s; 
     
    }
    
    #btn_log:hover {
-    background-color: #ffd8d8; /* Cambia el fondo a rosa al pasar el mouse */
+    background-color: #ffd8d8;
     color: rgb(0, 0, 0);
    }
 
