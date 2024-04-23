@@ -149,6 +149,7 @@ const UsersPage = () => {
          </div>
        
           <div>
+           
             <label htmlFor="Name">ID usertype:</label>
             <select className='ID_User_Usertype'name="ID_User_Usertype" id="ID_User_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
               <option value={1} >Administrador</option>
@@ -175,6 +176,7 @@ const UsersPage = () => {
           </tr>
         </thead>
         <tbody>
+        <img src="https://i.postimg.cc/h4md9K6f/user-square-svgrepo-com-1.png" alt="" />
           {users.map((user, index) => (
             <tr key={index}>
               <td>{user.ID_User}</td>
