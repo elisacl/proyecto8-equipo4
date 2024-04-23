@@ -15,46 +15,54 @@ function ShoppingCart() {
       {isOpen && (
         <div className="modal">
           <div className="shopping-card">
-          <button className="close-button"onClick={closeModal}>Cerrar</button>
-            <p className="tu-cesta">Tu cesta</p>
+            <button className="close-button" onClick={closeModal}> x </button>
 
-            <div className="product-content">
-              {cart.map(product => (
-                <div key={product.id} className="product-container">
-                  <div className="painting-image-container">
-                    <img className="painting-image" src={product.productImage} alt={product.productName} />
-                  </div>
 
-                  <div className="painting-details">
-                    <p className="painting-title">{product.productName}</p>
-                    <p className="painting-description">{product.productDescription}</p>
-                    <p className="painting-measures">{product.productMeasures}</p>
+            {/* Verifica si el carrito está vacío */}
+            {cart.length === 0 ? (
+              <div>
+                <div>
+                  <p className="tu-cesta-empty">Tu cesta está vacía</p>
+                </div>
+                <div>
+                  <img className="empty-cart" src="/images/empty.png" alt="Descripción de la imagen" />
+                </div>
+              </div>
 
-                    <div className="painting-delete-button-and-price-container">
-                      <p className="painting-price">{product.productPrice.monto} {product.productPrice.moneda}</p>
-                      <button className="painting-delete-button" onClick={() => removeFromCart(product.id)}>
-                        <img className="trash-icon" src="/images/trash-icon.svg" alt="Eliminar" />
-                      </button>
+            ) : (
+              <div className="product-content">
+                <p className="tu-cesta">Tu cesta</p>
+                {cart.map(product => (
+                  <div key={product.id} className="product-container">
+                    <div className="painting-image-container">
+                      <img className="painting-image" src={product.productImage} alt={product.productName} />
                     </div>
 
+                    <div className="painting-details">
+                      <p className="painting-title">{product.productName}</p>
+                      <p className="painting-description">{product.productDescription}</p>
+                      <p className="painting-measures">{product.productMeasures}</p>
+
+                      <div className="painting-delete-button-and-price-container">
+                        <p className="painting-price">{product.productPrice.monto} {product.productPrice.moneda}</p>
+                        <button className="painting-delete-button" onClick={() => removeFromCart(product.id)}>
+                          <img className="trash-icon" src="/images/trash-icon.svg" alt="Eliminar" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
-
-
-                </div>
-
-
-              ))}
-            </div>
-
-
-            <div className="total-price-container">
+                ))}
+                <div className="total-price-container">
               <hr className="line" />
               <div className="total-price-details">
-              <p className="total-price-title">Precio total:    </p>
-              <p className="total-price">{cart.reduce((total, product) => total + product.productPrice.monto, 0)}€</p>
+                <p className="total-price-title">Precio total:    </p>
+                <p className="total-price">{cart.reduce((total, product) => total + product.productPrice.monto, 0)}€</p>
               </div>
             </div>
+              </div>
+            )}
 
+            
           </div>
         </div>
       )}
