@@ -1,6 +1,4 @@
-* {
-    font-family: 'Manrope', sans-serif;
-}
+
 
 .footer {
     display: flex;
@@ -15,36 +13,39 @@
 
 .left-section {
     display: flex;
-    margin-left: 15px;
+    margin-left: 200px;
 }
 
 .contact-footer {
     margin-bottom: 0;
-    margin-left: 20px; /* Espacio entre los elementos Contacto y Horario */
+    margin-left: 20px; 
+    font-family: 'Manrope', sans-serif;
 }
 
 .time-footer{
     margin-bottom: 0;
     margin-left: 80px;
+    font-family: 'Manrope', sans-serif;
 }
 
 .contact-info {
     margin-bottom: 0;
-    margin-left: 20px; /* Espacio entre los elementos de Contacto y Horario */
+    margin-left: 20px; 
+    font-family: 'Manrope', sans-serif;
 }
 
 .time-info {
     margin-bottom: 0;
-    margin-left: 80px; /* Espacio entre los elementos de Contacto y Horario */
+    margin-left: 80px; 
 }
 
 .contact-info a {
-    text-decoration: none; /* Elimina la decoración del enlace */
-    color: inherit; /* Usa el color heredado del elemento padre (en este caso, el color del texto) */
+    text-decoration: none; 
+    color: inherit;
 }
 
 .contact-info a:hover {
-    color: #45e37f; 
+    color: #FFB8B8; 
 }
 
 .right-section {
@@ -59,20 +60,20 @@
 }
 
 .social-media > * {
-    margin-left: 50px; /* Espacio entre los iconos de redes sociales */
+    margin-left: 50px; 
     margin-right: 40px;
     width: 60px;
     height: 55px;
 }
 
 .social-media a {
-    text-decoration: none; /* Elimina la decoración del enlace */
-    color: inherit; /* Usa el color heredado del elemento padre (en este caso, el color del texto) */
+    text-decoration: none;
+    color: inherit; 
     
 }
 
 .social-media a[href*="facebook"]:hover svg {
-    color: #FFDF8C ; /* Cambia el color del icono de Facebook al pasar el mouse sobre el enlace */
+    color: #FFDF8C ; 
 }
 
 .social-media a[href*="twitter"]:hover svg {

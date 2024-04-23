@@ -69,11 +69,18 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 
 .add-to-cart-button{
-    
+        cursor: pointer;
         border: none;
         background: none;
         outline: none;
@@ -85,6 +92,11 @@ body {
     
 }
 
+.add-to-cart-button{
+    color: pink;
+
+}
+
 .add-to-cart-button:active{
-    transform: scale(0.95);
+    transform: scale(0.65);
 }
