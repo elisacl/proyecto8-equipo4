@@ -93,7 +93,7 @@ const UsersPage = () => {
   return (
     <>
     
-    {/* <div className='header-usersPage'>
+     <div className='header-usersPage'>
       <img className='logo-gallery' src="https://i.postimg.cc/pVK9c8tZ/logo1-1.png" alt="logo Galería" />
       <h1 className='header-h1'>Administrador de usuarios</h1>
     </div>
@@ -201,98 +201,8 @@ const UsersPage = () => {
   </div>
 </td>
       </table>
-      </div> */}
-      
-      <h1>Usuarios registrados</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Usuario tipo</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Teléfono</th>
-            <th>Dato</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{user.ID_User}</td>
-              <td>{user.ID_Usertype}</td>
-              <td>{user.Name}</td>
-              <td>{user.Phone}</td>
-              <td>{user.Email}</td>
-              <td>
-                <button onClick={() => handleEdit(user)}>
-                  Editar
-                </button>
-                <button onClick={() => handleDelete(user)}>
-                  Eliminar
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <form>
-      <div>
-        <label htmlFor="Name">Name:</label>
-        <input
-          type="text"
-          id="Name"
-          name="Name"
-          value={formData.Name}
-          onChange={handleChange}
-          required
-        />
-      </div>
-       <div>
-        <label htmlFor="Email">Correo Electrónico:</label>
-        <input
-          type="Email"
-          id="Email"
-          name="Email"
-          value={formData.Email}
-          onChange={handleChange}
-          required
-        />
-       </div>
-         <div>
-           <label htmlFor="Email">Teléfono:</label>
-            <input
-              type="Phone"
-              id="Phone"
-              name="Phone"
-              value={formData.Phone}
-              onChange={handleChange}
-              required
-            />
-          </div>
-         <div>
-            <label htmlFor="Password">Contrasena:</label>
-            <input
-              type="number"
-              id="Password"
-              name="Password"
-              value={formData.Password}
-              onChange={handleChange}
-              required
-            />
-         </div>
-          <div>
-            <label htmlFor="Name">ID usertype:</label>
-            <select name="ID_Usertype" id="ID_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
-              <option value={1} >Administrador</option>
-              <option value={2} >Cliente</option>
-              <option value={3} >Artista</option>
-            </select>
-          </div>
-       <div style={{padding:"20px"}}>
-          <button type="submit" onClick={handleSubmitCreate}>Añadir Usuario</button>
-          <button type="submit" onClick={handleSubmitUpdate}>Editar Usuario</button>
-       </div>
-      </form>
+      </div> 
+     
     </>
   );
 }
