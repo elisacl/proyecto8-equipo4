@@ -15,8 +15,13 @@
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.6.8",
+<<<<<<< HEAD
+=======
+    "json-server": "^1.0.0-alpha.23",
+>>>>>>> feature/general-gallery
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.22.3"
   },
   "devDependencies": {

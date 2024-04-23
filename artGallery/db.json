@@ -1,0 +1,258 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "userName": "admin",
+      "email": "admin@gmail.com",
+      "userPassword": "admin"
+    },
+    {
+      "id": "2",
+      "userName": "Mercedes",
+      "email": "jmercedes@gmail.com",
+      "userPassword": "190878"
+    },
+    {
+      "id": "3",
+      "userName": "Claudia",
+      "email": "claudia@gmail.com",
+      "userPassword": "999999"
+    },
+    {
+      "id": "4",
+      "userName": "Clara",
+      "email": "clara@gmail.com",
+      "userPassword": "888888"
+    },
+    {
+      "id": "5",
+      "userName": "Inés",
+      "email": "ines@gmail.com",
+      "userPassword": "777777"
+    },
+    {
+      "id": "6",
+      "userName": "Angy",
+      "email": "angy@gmail.com",
+      "userPassword": "444444"
+    },
+    {
+      "id": "7",
+      "userName": "Eli",
+      "email": "@gmail.com",
+      "userPassword": "555555"
+    }
+  ],
+  "products": [
+    {
+      "productImage": "/images/arte-abstracto1.png",
+      "productName": "Obra 3",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 500,
+        "moneda": "€"
+      },
+      "productStock": 3,
+      "productCategory": "Arte abstracto",
+      "productMeasures": "300x300",
+      "id": "1",
+      "userId": "2"
+    },
+    {
+      "productImage": "/images/expresionismo1.png",
+      "productName": "Obra 4",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 600,
+        "moneda": "€"
+      },
+      "productStock": 4,
+      "productCategory": "Expresionismo",
+      "productMeasures": "350x350",
+      "id": "2",
+      "userId": "4"
+    },
+    {
+      "productImage": "/images/digital2.png",
+      "productName": "Obra 6",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 800,
+        "moneda": "€"
+      },
+      "productStock": 6,
+      "productCategory": "Arte digital",
+      "productMeasures": "450x450",
+      "id": "3",
+      "userId": "3"
+    },
+    {
+      "productImage": "/images/realismo3.png",
+      "productName": "Obra 18",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 900,
+        "moneda": "€"
+      },
+      "productStock": 18,
+      "productCategory": "Realismo contemporáneo",
+      "productMeasures": "700x700",
+      "id": "15",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/arte-abstracto2.png",
+      "productName": "Obra 8",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 950,
+        "moneda": "€"
+      },
+      "productStock": 8,
+      "productCategory": "Arte abstracto",
+      "productMeasures": "500x500",
+      "id": "4",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/digital1.png",
+      "productName": "Obra 1",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 350,
+        "moneda": "€"
+      },
+      "productStock": 1,
+      "productCategory": "Arte digital",
+      "productMeasures": "200x200",
+      "id": "5",
+      "userId": "1"
+    },
+    {
+      "productImage": "/images/expresionismo2.png",
+      "productName": "Obra 9",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 350,
+        "moneda": "€"
+      },
+      "productStock": 9,
+      "productCategory": "Expresionismo",
+      "productMeasures": "200x200",
+      "id": "6",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/digital3.png",
+      "productName": "Obra 11",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 500,
+        "moneda": "€"
+      },
+      "productStock": 11,
+      "productCategory": "Arte digital",
+      "productMeasures": "300x300",
+      "id": "7",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/realismo2.png",
+      "productName": "Obra 17",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 900,
+        "moneda": "€"
+      },
+      "productStock": 17,
+      "productCategory": "Realismo contemporáneo",
+      "productMeasures": "650x650",
+      "id": "8",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/pop2.png",
+      "productName": "Obra 7",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 800,
+        "moneda": "€"
+      },
+      "productStock": 7,
+      "productCategory": "Neo-pop",
+      "productMeasures": "500x500",
+      "id": "9",
+      "userId": "2"
+    },
+    {
+      "productImage": "/images/pop3.png",
+      "productName": "Obra 12",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 600,
+        "moneda": "€"
+      },
+      "productStock": 12,
+      "productCategory": "Neo-pop",
+      "productMeasures": "350x350",
+      "id": "10",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/arte-abstracto3.png",
+      "productName": "Obra 13",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 700,
+        "moneda": "€"
+      },
+      "productStock": 13,
+      "productCategory": "Arte abstracto",
+      "productMeasures": "400x400",
+      "id": "11",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/expresionismo3.png",
+      "productName": "Obra 14",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 800,
+        "moneda": "€"
+      },
+      "productStock": 14,
+      "productCategory": "Expresionismo",
+      "productMeasures": "450x450",
+      "id": "12",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/realismo1.png",
+      "productName": "Obra 16",
+      "productDescription": "Acrílico en lienzo.",
+      "productPrice": {
+        "monto": 800,
+        "moneda": "€"
+      },
+      "productStock": 16,
+      "productCategory": "Realismo contemporáneo",
+      "productMeasures": "600x600",
+      "id": "13",
+      "userId": ""
+    },
+    {
+      "productImage": "/images/pop1.png",
+      "productName": "Obra 2",
+      "productDescription": "Óleo en lienzo.",
+      "productPrice": {
+        "monto": 550,
+        "moneda": "€"
+      },
+      "productStock": 2,
+      "productCategory": "Neo-pop",
+      "productMeasures": "250x250",
+      "id": "14",
+      "userId": "3"
+    }
+  ]
+}

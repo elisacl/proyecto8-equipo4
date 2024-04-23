@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import App from './components/App/App';
 import LoginForm from './components/Login/LoginForm';
 import AdminPage from './components/Views/AdminPage/AdminPage';
+import GeneralGallery from './components/Views/GeneralGallery/GeneralGallery';
 
-import './index.css'
 
 const router = createBrowserRouter([
   {
@@ -13,6 +13,7 @@ const router = createBrowserRouter([
     element: <App/>,
   },
   {
+
     path: "/loginform",
     element: <LoginForm/>,
   },
@@ -20,8 +21,12 @@ const router = createBrowserRouter([
     path: "/adminpage",
     element: <AdminPage/>,
   },
-]);
+  {
+    path: "generalgallery",
+    element: <GeneralGallery/>,
 
+  },
+]);
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router} />
