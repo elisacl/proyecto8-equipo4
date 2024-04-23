@@ -91,7 +91,7 @@
       "productName": "Obra 18",
       "productDescription": "Acrílico en lienzo.",
       "productPrice": {
-        "monto": 1200,
+        "monto": 900,
         "moneda": "€"
       },
       "productStock": 18,
@@ -105,7 +105,7 @@
       "productName": "Obra 8",
       "productDescription": "Óleo en lienzo.",
       "productPrice": {
-        "monto": 1000,
+        "monto": 950,
         "moneda": "€"
       },
       "productStock": 8,
@@ -161,7 +161,7 @@
       "productName": "Obra 17",
       "productDescription": "Óleo en lienzo.",
       "productPrice": {
-        "monto": 1100,
+        "monto": 900,
         "moneda": "€"
       },
       "productStock": 17,
@@ -175,7 +175,7 @@
       "productName": "Obra 7",
       "productDescription": "Acrílico en lienzo.",
       "productPrice": {
-        "monto": 900,
+        "monto": 800,
         "moneda": "€"
       },
       "productStock": 7,
@@ -231,7 +231,7 @@
       "productName": "Obra 16",
       "productDescription": "Acrílico en lienzo.",
       "productPrice": {
-        "monto": 1000,
+        "monto": 800,
         "moneda": "€"
       },
       "productStock": 16,
@@ -245,7 +245,7 @@
       "productName": "Obra 2",
       "productDescription": "Óleo en lienzo.",
       "productPrice": {
-        "monto": 450,
+        "monto": 550,
         "moneda": "€"
       },
       "productStock": 2,

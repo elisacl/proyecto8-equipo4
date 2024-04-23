@@ -1,14 +1,15 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import { CartContext } from '../contexts/CartContext';
+import React, { useContext } from 'react';
 import './Navbar.css';
 import Logo from "../img/logoGallery.svg";
 import Cart from "../img/CartIcon.svg";
 import User from "../img/UserIcon.svg";
-import Lupa from "../img/lupa.svg";
 import { useNavigate } from "react-router-dom";
 
-function Navbar({ openModal, isLogged}) {
+function Navbar({ isLogged}) {
   const navigate = useNavigate();
+
+  const { cart, openModal } = useContext(CartContext);
 
   return (
 
@@ -17,20 +18,26 @@ function Navbar({ openModal, isLogged}) {
 
       <div className="navbar-left">
         <ul>
-          <p>Obras de Arte</p>
-          <p className="contact">Contacto</p>
+          <button className="button-navbar" id="button-paintings">Obras de arte</button>
+          <button className="button-navbar">Contacto</button>
         </ul>
       </div>
 
       <div className="navbar-center">
         <ul>
           <img src={User} alt="UserLogo" className="userLogo" />
+          <button className="button-navbar">Login</button>
         </ul>
       </div>
 
       <div className="navbar-right">
-        <img src={Cart} alt="cart" className="cart" />
-        <input type="text" placeholder="Buscar..." />
+        
+        <img src={Cart} alt="cart" className="cart" onClick={openModal}/>
+        <span className="cart-counter">{cart.length}</span> 
+        
+        <div className="search-bar-container">
+        <input className="search-bar" type="text" placeholder="Buscar..." />
+        </div>
       </div>
 
     </nav>
@@ -38,3 +45,5 @@ function Navbar({ openModal, isLogged}) {
 }
 
 export default Navbar;
+
+

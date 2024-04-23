@@ -25,6 +25,10 @@ body {
     text-align: center;
 }
 
+.filters-container{
+    margin: 100px 0px
+}
+
 .filters-lines{
    width: 1030px;
    border: none;

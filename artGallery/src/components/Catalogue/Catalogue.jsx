@@ -20,8 +20,6 @@ function Catalogue() {
 
                 <section className='filters-container'>
 
-                    <h2 id="filters-title" className="filters-title">Nuestras obras</h2>
-
                     <div className='categories-buttons-container'>
                         <button className={`categories-buttons ${selectedCategory === 'Expresionismo' ? 'selected' : ''}`} onClick={() => handleCategoryClick('Expresionismo')}>Expresionismo</button>
                         <button className={`categories-buttons ${selectedCategory === 'Arte abstracto' ? 'selected' : ''}`} onClick={() => handleCategoryClick('Arte abstracto')}>Arte abstracto</button>
