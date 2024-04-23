@@ -36,7 +36,7 @@ function Navbar({ isLogged}) {
         <span className="cart-counter">{cart.length}</span> 
         
         <div className="search-bar-container">
-        <input className="search-bar" type="text" placeholder="Buscar..." />
+        <input className="search-bar" type="text" placeholder="       Buscar..." />
         </div>
       </div>
 

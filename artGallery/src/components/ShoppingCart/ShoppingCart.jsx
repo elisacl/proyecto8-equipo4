@@ -3,12 +3,7 @@ import { CartContext } from '../contexts/CartContext';
 import './ShoppingCart.css';
 
 function ShoppingCart() {
-  const { cart, setCart, isOpen, openModal } = useContext(CartContext);
-
-  // Función para cerrar el modal
-  function closeModal() {
-    openModal(false); // Asegúrate de que la función openModal pueda aceptar un valor booleano
-  }
+  const { cart, setCart, isOpen, closeModal } = useContext(CartContext);
 
   // Función para eliminar un producto del carrito
   function removeFromCart(productId) {
@@ -20,6 +15,7 @@ function ShoppingCart() {
       {isOpen && (
         <div className="modal">
           <div className="shopping-card">
+          <button className="close-button"onClick={closeModal}>Cerrar</button>
             <p className="tu-cesta">Tu cesta</p>
 
             <div className="product-content">

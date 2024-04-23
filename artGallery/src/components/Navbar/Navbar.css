@@ -16,9 +16,14 @@
 }
 
 .cart{
-  width: 35px;
-  height: 35px;
-  margin-right: 0px
+  width: 30px;
+  height: 30px;
+  margin-bottom: 3px;
+  margin-left: 10px
+}
+
+.cart-counter{
+  margin-right: 20%
 }
 
 .logoGallery {
@@ -35,7 +40,7 @@
 .button-navbar{
     font-weight: 200;
     font-family: 'Manrope', sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     margin-right: 100px;
     padding: 0px;
     background-color: transparent; 
@@ -46,13 +51,13 @@
 }
 
 .search-bar{
-  border: 1px solid black; /* Establece un borde negro de 1px */
+  border: 1px solid black; 
   border-radius: 40px; /* Redondea las esquinas con un radio de 25px */
-  padding: 5px; /* Añade un padding interno para mejorar la experiencia de usuario */
+  padding: 20px; /* Añade un padding interno para mejorar la experiencia de usuario */
   width: 200px; /* Establece el ancho de la barra de búsqueda */
   height: 35px; /* Establece la altura de la barra de búsqueda */
   outline: none; /* Elimina el contorno predeterminado al hacer foco */
-  box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño total del input */
+  box-sizing: border-box;
 }
 
 .search-bar-container{
@@ -106,7 +111,6 @@
   padding: 2px;
   width: 200px;
   margin-left: auto;
-  border-radius: 6px;
 }
 
 .cart {

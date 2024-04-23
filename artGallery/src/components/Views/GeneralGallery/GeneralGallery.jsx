@@ -17,7 +17,7 @@ const GeneralGallery = () => {
      <Catalogue/>
       <Modal isOpen={isOpen} onRequestClose={closeModal}>
         <ShoppingCart/>
-        <button onClick={closeModal}>Cerrar</button>
+        
       </Modal>
      <Footer/>
     </div>
