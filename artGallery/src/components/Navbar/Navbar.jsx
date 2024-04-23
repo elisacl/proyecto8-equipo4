@@ -1,34 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import './Navbar.css'
+import './Navbar.css';
+import Logo from "../img/logoGallery.svg";
+import Cart from "../img/CartIcon.svg";
+import User from "../img/UserIcon.svg";
+import Lupa from "../img/lupa.svg";
+import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ openModal, isLogged}) {
+  const navigate = useNavigate();
+
   return (
-    <nav className="navbar" style={{ backgroundColor: '#EBEDEA' }}>
+
+    <nav className="navbar">
+      <img src={Logo} alt="logo" className="logoGallery" />
+
       <div className="navbar-left">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/nuestro-arte">Nuestro Arte</Link></li>
-          <li><Link to="/artistas">Artistas</Link></li>
-          <li><Link to="/exhibiciones">Exhibiciones</Link></li>
-          <li><Link to="/colaboraciones">Colaboraciones</Link></li>
-          <li><Link to="/contacto">Contacto</Link></li>
+          <p>Obras de Arte</p>
+          <p className="contact">Contacto</p>
         </ul>
       </div>
 
       <div className="navbar-center">
-        <input type="text" placeholder="Buscar..." />
+        <ul>
+          <img src={User} alt="UserLogo" className="userLogo" />
+        </ul>
       </div>
 
       <div className="navbar-right">
-        <ul>
-          <li><Link to="/carrito"><FontAwesomeIcon icon={faShoppingCart} /></Link></li>
-          <li><Link to="/login">Log in</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
-        </ul>
+        <img src={Cart} alt="cart" className="cart" />
+        <input type="text" placeholder="Buscar..." />
       </div>
+
     </nav>
   );
 }

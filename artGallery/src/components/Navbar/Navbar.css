@@ -1,11 +1,21 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   color: black;
   align-items: center;
   background-color: #EBEDEA;
-  width: 98%; /* Modifica el ancho aquí */
-  padding: 20px; /* Añade relleno a los lados para mantener el espacio entre los elementos y los bordes */
+  width: 98%; 
+  padding: 15px; 
+}
+
+.logoGallery {
+  width: 6%;
+  padding-left: 3%;
+  padding-right: 0%;
 }
 
 .navbar-left ul {
@@ -13,37 +23,56 @@
   margin: 0;
   padding: 0;
   color: black;
+ 
 }
 
-.navbar-left ul li {
+.navbar-left ul p {
   display: inline;
-  margin-right: 10px;
   color: black;
+  font-size: 20px;
+  font-weight: 400;
 }
 
-.navbar-right ul {
+.contact {
+  margin-left: 50px;
+}
+
+.navbar-center ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   color: black;
 }
 
-.navbar-right ul li {
-  display: inline;
-  margin-left: 10px;
+.navbar-center ul{
+  display:inline-flex;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 400;
   color: black;
+  width: 50px;
 }
 
-.navbar-right ul li:first-child {
-  margin-left: 0;
+.userLogo {
+  width: 50px;
+  margin-right:10px;
 }
 
-.navbar-center {
-  flex-grow: 1;
-  text-align: center;
-}
+.navbar-right {
+  display: flex; /* Cambiar a flex para utilizar flexbox */
+  flex-grow: 0.05;
+  justify-content: space-between;
+  align-items: center;
+}     
 
-.navbar-center input[type="text"] {
-  padding: 5px;
+.navbar-right input[type="text"] {
+  padding: 2px;
   width: 200px;
+  margin-left: auto;
+  border-radius: 6px;
+}
+
+.cart {
+  width: 13%;
+  margin-right: 80px;
 }

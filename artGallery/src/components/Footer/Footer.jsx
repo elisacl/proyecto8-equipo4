@@ -1,43 +1,47 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import "../Footer/Footer.css";
+
 
 const Footer = () => {
     return (
-        <footer style={footerStyle}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <h6 className='footer-text' style={textStyle}>© 2024, Gallery ARET - Todos los derechos reservados</h6>
+        <footer className="footer">
+            <div className="left-section">
                 <div>
-                    <a href="https://www.facebook.com/tucuenta" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} size="2x" style={iconStyle} />
-                    </a>
-                    <a href="https://twitter.com/tucuenta" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faTwitter} size="2x" style={iconStyle} />
-                    </a>
-                    <a href="https://www.instagram.com/tucuenta" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} size="2x" style={iconStyle} />
-                    </a>
+                    <h4 className='contact-footer'>Contacto</h4>
+                    <div className="contact-info">
+                        <a href="https://maps.app.goo.gl/ULUPipbVHFqfJMq7A" target="_blank" alt="Direction">
+                            <p>123 Calle Principal, Ciudad Arte, AR</p>
+                        </a>
+                        <p>+930 778 456</p>
+                        <p className="Derechos">© 2024, Gallery ARET - Todos los derechos reservados</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 className='time-footer'>Horario</h4>
+                    <div className="time-info">
+                        <p>Lunes - Viernes: 10:00 - 18:00</p>
+                        <p>Sábado: 10:00 - 14:00</p>
+                    </div>
                 </div>
             </div>
-    
-        </footer>
+            <div className="social-media">
+                <a href="https://www.facebook.com/?locale=es_ES" target="_blank" alt="Facebook">
+                    <FontAwesomeIcon icon={faFacebook} />
+                </a>
+                <a href="https://twitter.com/home?lang=es" target="_blank" alt="Twitter">
+                    <FontAwesomeIcon icon={faTwitter} />
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" alt="Instagram">
+                    <FontAwesomeIcon icon={faInstagram} />
+                </a>
+            </div >
+
+        </footer >
     );
 };
 
-const footerStyle = {
-    backgroundColor: '#000000',
-    color: '#EBEDEA',
-    textAlign: 'center',
-    padding: '1rem',
-};
-
-const iconStyle = {
-    marginRight: '1rem',
-    color: '#EBEDEA',
-};
-
-const textStyle = {
-    margin: '0',
-};
-
 export default Footer;
+
+
