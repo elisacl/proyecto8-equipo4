@@ -26,9 +26,9 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"],
+.input-form[type="text"],
 textarea,
-select {
+.select-form {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc; 

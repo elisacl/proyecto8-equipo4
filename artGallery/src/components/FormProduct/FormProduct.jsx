@@ -85,7 +85,7 @@ const ProductForm = () => {
                     <h1>Publica tu obra</h1>
                     <div className='form-group'>
                         <label htmlFor="title">Título:</label>
-                        <input
+                        <input className='input-form'
                             type="text"
                             id="title"
                             name="title"
@@ -96,7 +96,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="description">Descripción:</label>
-                        <input
+                        <input className='input-form'
                             type="text"
                             id="description"
                             name="description"
@@ -107,7 +107,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="dimensions">Dimensiones:</label>
-                        <input
+                        <input className='input-form'
                             type="text"
                             id="dimensions"
                             name="dimensions"
@@ -118,7 +118,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="price">Precio:</label>
-                        <input
+                        <input className='input-form'
                             type="text"
                             id="price"
                             name="price"
@@ -132,7 +132,7 @@ const ProductForm = () => {
                     </div>
                     <div className='formgroup'>
                         <label htmlFor="category">Categoría:</label>
-                        <select
+                        <select className = 'select-form'
                             id="category"
                             name="category"
                             value={formData.category}
@@ -149,7 +149,7 @@ const ProductForm = () => {
                     </div>
                     <div className='form-group'>
                         <label htmlFor="image">Imagen:</label>
-                        <input
+                        <input className='input-form'
                             type="text"
                             id="image"
                             name="image"
