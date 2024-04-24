@@ -1,1 +1,68 @@
-rafce   
+
+.login-wrapper {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: transparent;
+    margin-top: 100px;
+    margin-bottom: 8%;
+   }
+   
+   .login-wrapper h1 {
+    text-align: center;
+    margin-bottom: 20px;
+   }
+   
+   .login-wrapper form {
+    display: flex;
+    flex-direction: column;
+   }
+   
+   .login-wrapper label {
+    margin-bottom: 10px;
+    font-family: 'Manrope', sans-serif;
+    color: #000000;
+    font-weight: 200;
+   }
+   
+   .login-wrapper input {
+    border: 1px solid black; 
+    border-radius: 40px; 
+    padding: 20px; 
+    width: 110%; 
+    height: 35px; 
+    outline: none;
+    box-sizing: border-box;
+   }
+   
+   .login-wrapper button {
+    font-family: 'Manrope', sans-serif; /* Asegúrate de que la fuente Manrope esté disponible en tu proyecto */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 40px; /* Bordes redondeados de 20px */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Permite el uso de propiedades como padding y border-radius */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    width: 163px; /* Ancho del botón */
+    height: 59px; /* Alto del botón */
+    font-size: 18px; /* Tamaño del texto */
+    transition: background-color 0s; /* Transición instantánea al cambiar el color de fondo */
+    margin-top: 20%;
+    margin-left: 30%
+   }
+   
+   .login-wrapper button:hover {
+    background-color: #ffd8d8; /* Cambia el fondo a rosa al pasar el mouse */
+    color: rgb(0, 0, 0);
+   }
+
+   .user-image{
+    width: 40%;
+    height: 40%;
+    margin: 0px 0px 50px 100px
+   }
+
+ 

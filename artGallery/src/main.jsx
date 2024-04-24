@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import App from './components/App/App';
 import GeneralGallery from './components/Views/GeneralGallery/GeneralGallery';
+import LoginPage from './components/Views/LoginPage/LoginPage'
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
   {
     path: "generalgallery",
     element: <GeneralGallery/>,
+  },
+  {
+    path: "loginpage",
+    element: <LoginPage/>,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
