@@ -1,15 +1,27 @@
+
 import { CartContext } from '../contexts/CartContext';
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import './Navbar.css';
 import Logo from "../img/logoGallery.svg";
 import Cart from "../img/CartIcon.svg";
 import User from "../img/UserIcon.svg";
+import Login from '../Login/Login';
 import { useNavigate } from "react-router-dom";
 
 function Navbar({ isLogged}) {
   const navigate = useNavigate();
 
+  const [showLoginForm, setShowLoginForm] = useState(false); // Estado para controlar la visualización del formulario
+
   const { cart, openModal } = useContext(CartContext);
+
+  const openLoginPopup = () => {
+    setShowLoginForm(true);
+  };
+
+  const closeLoginPopup = () => {
+    setShowLoginForm(false);
+  };
 
   return (
 
@@ -26,7 +38,7 @@ function Navbar({ isLogged}) {
       <div className="navbar-center">
         <ul>
           <img src={User} alt="UserLogo" className="userLogo" />
-          <button className="button-navbar">Login</button>
+          <button className="button-navbar" onClick={openLoginPopup}>Login</button>
         </ul>
       </div>
 
@@ -39,6 +51,7 @@ function Navbar({ isLogged}) {
         <input className="search-bar" type="text" placeholder="       Buscar..." />
         </div>
       </div>
+
 
     </nav>
   );
