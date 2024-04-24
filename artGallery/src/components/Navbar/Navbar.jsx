@@ -1,36 +1,108 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
-import './Navbar.css'
-
-function Navbar() {
+import { CartContext } from '../contexts/CartContext';
+import React, { useContext } from 'react';
+import './Navbar.css';
+import Logo from "../img/logoGallery.svg";
+import Cart from "../img/CartIcon.svg";
+import User from "../img/UserIcon.svg";
+import { useNavigate } from "react-router-dom";
+function Navbar({ isLogged}) {
+  const navigate = useNavigate();
+  const { cart, openModal } = useContext(CartContext);
   return (
-    <nav className="navbar" style={{ backgroundColor: '#EBEDEA' }}>
+    <nav className="navbar">
+      <img src={Logo} alt="logo" className="logoGallery" />
       <div className="navbar-left">
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/nuestro-arte">Nuestro Arte</Link></li>
-          <li><Link to="/artistas">Artistas</Link></li>
-          <li><Link to="/exhibiciones">Exhibiciones</Link></li>
-          <li><Link to="/colaboraciones">Colaboraciones</Link></li>
-          <li><Link to="/contacto">Contacto</Link></li>
+          <button className="button-navbar" id="button-paintings">Obras de arte</button>
+          <button className="button-navbar">Contacto</button>
         </ul>
       </div>
-
       <div className="navbar-center">
-        <input type="text" placeholder="Buscar..." />
-      </div>
-
-      <div className="navbar-right">
         <ul>
-          <li><Link to="/carrito"><FontAwesomeIcon icon={faShoppingCart} /></Link></li>
-          <li><Link to="/login">Log in</Link></li>
-          <li><Link to="/signup">Sign Up</Link></li>
+          <img src={User} alt="UserLogo" className="userLogo" />
+          <button className="button-navbar">Login</button>
         </ul>
+      </div>
+      <div className="navbar-right">
+        
+        <img src={Cart} alt="cart" className="cart" onClick={openModal}/>
+        <span className="cart-counter">{cart.length}</span> 
+        
+        <div className="search-bar-container">
+        <input className="search-bar" type="text" placeholder="       Buscar..." />
+        </div>
       </div>
     </nav>
   );
 }
-
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import { CartContext } from '../contexts/CartContext';
+// import React, { useContext } from 'react';
+// import './Navbar.css';
+// import Logo from "../img/logoGallery.svg";
+// import Cart from "../img/CartIcon.svg";
+// import User from "../img/UserIcon.svg";
+// import { useNavigate } from "react-router-dom";
+
+// function Navbar({ isLogged}) {
+//   const navigate = useNavigate();
+
+//   const { cart, openModal } = useContext(CartContext);
+
+//   return (
+
+//     <nav className="navbar">
+//       <img src={Logo} alt="logo" className="logoGallery" />
+
+//       <div className="navbar-left">
+//         <ul>
+//           <button className="button-navbar" id="button-paintings">Obras de arte</button>
+//           <button className="button-navbar">Contacto</button>
+//         </ul>
+//       </div>
+
+//       <div className="navbar-center">
+//         <ul>
+//           <img src={User} alt="UserLogo" className="userLogo" />
+//           <button className="button-navbar">Login</button>
+//         </ul>
+//       </div>
+
+//       <div className="navbar-right">
+        
+//         <img src={Cart} alt="cart" className="cart" onClick={openModal}/>
+//         <span className="cart-counter">{cart.length}</span> 
+        
+//         <div className="search-bar-container">
+//         <input className="search-bar" type="text" placeholder="       Buscar..." />
+//         </div>
+//       </div>
+
+//     </nav>
+//   );
+// }
+
+// export default Navbar;
+
+

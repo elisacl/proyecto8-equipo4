@@ -94,6 +94,44 @@ export default LoginForm;
 
 
 
+//   return (
+//     <div>
+//       <input type="text" placeholder="Nombre de usuario" value={name} onChange={handleNameChange} />
+//       <input type="password" placeholder="Contraseña" value={password} onChange={handlePasswordChange} />
+//       <button onClick={handleLogin}>Iniciar sesión</button>
+//     </div>
+//   );
+// }
+
+// export default LoginForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

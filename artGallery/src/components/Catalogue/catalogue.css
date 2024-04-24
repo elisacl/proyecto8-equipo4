@@ -1,0 +1,70 @@
+body {
+    font-family: 'Manrope', sans-serif;
+    color: #000000;
+}
+
+.header-catalogue {
+    width: 100%;
+}
+
+.catalogue-body button {
+    color: hsl(0, 0%, 0%);
+    font-size:  20px;
+}
+
+.catalogue-body{
+    color:  #000000;
+    margin-top:50px;
+    margin-bottom:100px
+}
+
+#filters-title{
+    font-size:  42px;
+    font-weight:  400;
+    color:  #000000;
+    text-align: center;
+}
+
+.filters-container{
+    margin: 100px 0px
+}
+
+.filters-lines{
+   width: 1030px;
+   border: none;
+   height:  1px; 
+   background-color: #000000;
+}
+
+.categories-buttons-container{
+    display: flex;  
+    justify-content: center;
+    gap: 40px;
+}
+
+.categories-buttons{
+    background-color: transparent;
+    color: #000000;
+    font-weight:  200;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+}
+
+.categories-buttons:hover{
+    color: #FF9A9A;
+
+}
+
+  .categories-buttons.selected::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000; 
+    margin-top: 5px;
+}
+

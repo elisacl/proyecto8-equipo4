@@ -1,14 +1,12 @@
 import React from 'react';
-import Navbar from '../Navbar/Navbar';
-import Footer from '../Footer/Footer';
+import GeneralGallery from '../Views/GeneralGallery/GeneralGallery';
+import { CartProvider } from '../contexts/CartContext'
 
 function App() {
   return (
-    <>
-      <Navbar />
-      {/* Contenido de la aplicación */}
-      <Footer />
-    </>
+    <CartProvider>
+      <GeneralGallery />
+    </CartProvider>
   );
 }
 
