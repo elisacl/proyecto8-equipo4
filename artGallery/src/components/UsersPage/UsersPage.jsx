@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from "axios";
+import './UsersPage.css'
 
 const UsersPage = () => {
   const [users, setUsers] = useState([]);
@@ -91,6 +92,7 @@ const UsersPage = () => {
 
   return (
     <>
+    <div>
       <h1>Usuarios registrados</h1>
       <table>
         <thead>
@@ -123,12 +125,14 @@ const UsersPage = () => {
           ))}
         </tbody>
       </table>
+      </div>
 
-      <form>
+      <form className='form-container'>
       
       <div>
         <label htmlFor="Name">Name:</label>
         <input
+        className='input-name'
           type="text"
           id="Name"
           name="Name"
@@ -140,6 +144,7 @@ const UsersPage = () => {
        <div>
         <label htmlFor="Email">Correo Electrónico:</label>
         <input
+        className='input-email'
           type="Email"
           id="Email"
           name="Email"
@@ -151,6 +156,7 @@ const UsersPage = () => {
          <div>
            <label htmlFor="Email">Teléfono:</label>
             <input
+            className='input-phone'
               type="Phone"
               id="Phone"
               name="Phone"
@@ -163,6 +169,7 @@ const UsersPage = () => {
          <div>
             <label htmlFor="Password">Contrasena:</label>
             <input
+            className='input-pass'
               type="number"
               id="Password"
               name="Password"
