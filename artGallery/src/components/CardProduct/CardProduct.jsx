@@ -50,7 +50,7 @@ const CardProduct = ({ onEdit, onDelete }) => {
         //         </div>
         //         </>
         //     ) : (
-        <p>Cargando...</p>
+        <p></p>
         //     )} */}
         // </div>
     );
