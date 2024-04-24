@@ -15,21 +15,43 @@
     z-index: 100;
 }
 
-.close-button{
-    
-}
-.tu-cesta {
+.close-button {
+    margin-left: 400px;
+    background: transparent; 
+    border: none; 
+    color: #cecece; 
+    cursor: pointer; 
+    padding: 0; 
+    font-size: 16px; 
+   }
+   
+   .close-button:hover {
+    color: black;
+   }
+   
+   .close-button:focus {
+    outline: none; 
+   }
+
+   .tu-cesta {
     font-size: 35px;
     font-weight: 400;
-    margin-bottom: 60px
+    margin-bottom: 90px;
+    margin-left: 140px;
+    margin-top: 50px
+}
+
+.tu-cesta-empty {
+    font-size: 35px;
+    font-weight: 400;
+    margin: 50px 0px 90px 25px
+
 }
 
 .product-content {
     display: flex;
     flex-wrap: wrap;
-    /* Esto permite que los elementos se envuelvan en varias filas si no hay suficiente espacio en una sola fila */
     justify-content: space-between;
-    /* Esto distribuye el espacio entre los elementos de manera uniforme */
 }
 
 .product-container {
@@ -41,9 +63,7 @@
 
 .painting-image-container {
     flex: 1;
-    /* Asegura que la imagen ocupe el espacio disponible */
     margin-right: 15px;
-    /* Añade un margen a la derecha de la imagen para separarla de los detalles */
 }
 
 .painting-image {
@@ -112,15 +132,73 @@
 }
 
 .total-price-details {
-    font-size: 18px;
+    font-size: 19px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px
+    margin: 20px;
+    margin-top:30px;
+   
 }
 
 .line {
     height: 5px;
     border: none;
     background-color: #EBEDEA;
+}
+
+.empty-cart{
+    width: 332px ;
+    height: 323px;
+    margin-left: 30px;
+    margin-bottom: 50px
+}
+
+.generic-button {
+    font-family: 'Manrope', sans-serif; /* Asegúrate de que la fuente Manrope esté disponible en tu proyecto */
+    background-color: black; /* Fondo negro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    border-radius: 40px; /* Bordes redondeados de 20px */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Permite el uso de propiedades como padding y border-radius */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    width: 163px; /* Ancho del botón */
+    height: 59px; /* Alto del botón */
+    font-size: 18px; /* Tamaño del texto */
+    transition: background-color 0s; /* Transición instantánea al cambiar el color de fondo */
+    margin: 40px 0px 30px 120px
+   }
+   
+   .generic-button:hover {
+    background-color: #ffd8d8; /* Cambia el fondo a rosa al pasar el mouse */
+    color: rgb(0, 0, 0);
+   }
+
+  #buy-button{
+    font-size: 16px;
+    margin: 0px 0px 30px 140px;
+    width: 130px; 
+    height: 50px;
+  }
+
+  .thank-you{
+    font-size: 30px;
+    font-weight: 400;
+    margin: 50px 0px 90px 30px
+  }
+
+  .delivered{
+    width: 332px ;
+    height: 223px;
+    margin-left: 30px;
+    margin-bottom: 50px
+}
+
+.delivered-message{
+    font-size: 18px;
+    font-weight: 200;
+    margin: 20px 0px 50px 85px
 }
