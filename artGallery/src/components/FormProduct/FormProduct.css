@@ -53,3 +53,87 @@ textarea,
 .button-add-product:hover {
     background-color: #4b4b4b;
 }
+
+body {
+    font-family: ‘Manrope’, sans-serif;
+    color: #000000;
+}
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+.card-product {
+    width: 20%;
+    height: 40%;
+}
+.product-image-container {
+    position: relative;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin: 35px;
+}
+.product-title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.product-measures {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.product-description {
+    font-size: 16px;
+    font-weight: 200;
+    max-height: 200px; /* Establece una altura máxima */
+    overflow: auto; /* Agrega barras de desplazamiento si es necesario */
+    margin-top: 10px;
+}
+.price {
+    font-size: 18px;
+    font-weight: 300;
+}
+.price-details {
+    margin-top: 10px;
+}
+.product-stock {
+    font-size: 16px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+.generic-button {
+    font-family: ‘Manrope’, sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+    font-size: 18px;
+    transition: background-color 0s;
+    margin: 1px 0px 30px 120px
+   }
+   .generic-button:hover {
+    background-color: #FFD8D8;
+    color: rgb(0, 0, 0);
+   }

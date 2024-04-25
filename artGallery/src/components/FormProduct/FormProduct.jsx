@@ -204,20 +204,24 @@ const ArtisticsPage = () => {
         </form>
       </div>
 
-      <div className="product-list">
+      <div className='product-container'>
         {art.map((arts, index) => (
-          <tr key={index}>
-            <td>{arts.Title}</td>
-            <td>{arts.Description}</td>
-            <td>{arts.Measurements}</td>
-            <td>{arts.Unit_Price}</td>
-            <td>{arts.Image}</td>
-            <td>{arts.Stock}</td>
-             <td><button onClick={() => handleEdit(arts)}>Editar</button></td>
+          <div key={index} className='card'>
+            <div className='product-details'>
+              <div className='card-product'>
+                <img src={arts.Image} alt='{arts.Image}' />
+              </div>
+            <div className='product-title'>{arts.Title}</div>
+            <div className='product-description'>{arts.Description}</div>
+            <div className='product-measures'>{arts.Measurements}</div>
+            <span className='price'>{arts.Unit_Price}</span>
+            <div className='product-stock'>{arts.Stock}</div>
+             <div><button className='generic-button' onClick={() => handleEdit(arts)}>Editar</button></div>
               {arts.ID_Art && (
-            <td><button onClick={() => { console.log(arts.ID_Art); handleDelete(arts); }}>Eliminar</button></td>
+            <div><button className='generic-button' onClick={() => { console.log(arts.ID_Art); handleDelete(arts); }}>Eliminar</button></div>
               )}
-          </tr>
+            </div>
+          </div>
         ))}
       </div>
     </div>
