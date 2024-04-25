@@ -107,7 +107,7 @@ const ArtisticsPage = () => {
             <label htmlFor="ID_User">Artista:</label>
             <input
               className='form-input'
-              type="number"
+              type="text"
               id="ID_User"
               name="ID_User"
               value={formData.ID_User}
