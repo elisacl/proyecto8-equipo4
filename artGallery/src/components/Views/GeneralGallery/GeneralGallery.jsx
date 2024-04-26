@@ -7,19 +7,21 @@ import ShoppingCart from '../../ShoppingCart/ShoppingCart';
 import Footer from '../../Footer/Footer';
 import Modal from '../../Modal/Modal';
 
+
 const GeneralGallery = () => {
  const { isOpen, openModal, closeModal } = useContext(CartContext);
 
  return (
     <div>
-     <Navbar/>
+      
+      {/* <Navbar /> */}
      <Carousel/>
-     <Catalogue/>
-      <Modal isOpen={isOpen} onRequestClose={closeModal}>
+     <Catalogue/> 
+       <Modal isOpen={isOpen} onRequestClose={closeModal}>
         <ShoppingCart/>
         
-      </Modal>
-     <Footer/>
+      </Modal> 
+     <Footer/> 
     </div>
  )
 }

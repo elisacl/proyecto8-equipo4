@@ -6,7 +6,7 @@ function LoginForm() {
 
   const handleNameChange = (event) => {
     setName(event.target.value);
-    console.log(555555555555);
+    
     console.log(event.target.value);
   };
 
@@ -16,7 +16,8 @@ function LoginForm() {
   };
 
   const handleLogin = () => {
-    fetch('http://localhost:5000/api/login', {
+    const url = 'http://localhost:5000/api/login';
+    fetch(url, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -26,7 +27,7 @@ function LoginForm() {
     .then(response => {
       
       if (response.ok) {
-        return response.json(); // Convertir la respuesta a JSON
+        return response.json();
       } else {
         throw new Error('Error al iniciar sesión. Por favor, verifica tus credenciales.');
       }
@@ -34,7 +35,7 @@ function LoginForm() {
     .then(data => {
       const role = data.role;
       console.log(role)
-      // Verificar el tipo de usuario y redirigirlo a la página correspondiente
+      
       switch(role) {
         
         case 'Admin':
@@ -47,7 +48,7 @@ function LoginForm() {
           window.location.href = '/';
           break;
         default:
-          // Si el rol no está definido, redirigir a una página de error o a la página principal
+          
           window.location.href = '/';
       }
     })
@@ -57,6 +58,7 @@ function LoginForm() {
   };
 
   return (
+    
     <div>
       <input type="text" placeholder="Nombre de usuario" value={name} onChange={handleNameChange} />
       <input type="password" placeholder="Contraseña" value={password} onChange={handlePasswordChange} />

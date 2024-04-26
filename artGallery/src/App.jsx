@@ -1,15 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Product from './components/FormProduct/FormProduct';
 
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/FormProduct" component={Product} />
-      </Switch>
-    </Router>
-  );
-}
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import {Router2} from './router2/Router2'
+import { RouterProvider } from 'react-router-dom';
 
-export default App;
+
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <RouterProvider router={Router2}></RouterProvider>
+  </React.StrictMode>
+)
+
+

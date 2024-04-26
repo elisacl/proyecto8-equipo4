@@ -92,9 +92,9 @@ const UsersPage = () => {
 
   return (
     <>
-    <div>
+    <div className='tabla_usuarios'>
       <h1>Usuarios registrados</h1>
-      <table>
+      <table id='table_content' >
         <thead>
           <tr>
             <th>ID</th>
@@ -102,10 +102,9 @@ const UsersPage = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Teléfono</th>
-            <th>Dato</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody id='bodytable'>
           {users.map((user, index) => (
             <tr key={index}>
               <td>{user.ID_User}</td>
@@ -113,11 +112,11 @@ const UsersPage = () => {
               <td>{user.Name}</td>
               <td>{user.Phone}</td>
               <td>{user.Email}</td>
-              <td>
-                <button onClick={() => handleEdit(user)}>
+              <td className='botones_admin'>
+                <button className='botones_admin_btn' onClick={() => handleEdit(user)}>
                   Editar
                 </button>
-                <button onClick={() => handleDelete(user)}>
+                <button  className='botones_admin_btn' onClick={() => handleDelete(user)}>
                   Eliminar
                 </button>
               </td>
@@ -181,7 +180,7 @@ const UsersPage = () => {
        
           <div>
             <label htmlFor="Name">ID usertype:</label>
-            <select name="ID_Usertype" id="ID_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
+            <select className='selectadmin' name="ID_Usertype" id="ID_Usertype" value={formData.ID_Usertype} onChange={handleChange}>
               <option value={1} >Administrador</option>
               <option value={2} >Cliente</option>
               <option value={3} >Artista</option>

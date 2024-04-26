@@ -4,16 +4,15 @@ import './ShoppingCart.css';
 
 function ShoppingCart() {
  const { cart, setCart, isOpen, closeModal } = useContext(CartContext);
- const [showBuyContent, setShowBuyContent] = useState(false); // Nuevo estado para controlar el contenido
-
- // Función para eliminar un producto del carrito
+ const [showBuyContent, setShowBuyContent] = useState(false); 
+ 
  function removeFromCart(productId) {
     setCart(prevCart => prevCart.filter(product => product.id !== productId));
  }
 
- // Función para manejar el clic en el botón de comprar
+ 
  function handleBuyClick() {
-    setShowBuyContent(true); // Cambia el estado para mostrar el contenido de compra
+    setShowBuyContent(true); 
  }
 
  return (
@@ -23,7 +22,7 @@ function ShoppingCart() {
           <div className="shopping-card">
             <button className="close-button" onClick={closeModal}> x </button>
 
-            {/* Verifica si el carrito está vacío o si se debe mostrar el contenido de compra */}
+            
             {cart.length === 0 ? (
               <div>
                 <div>

@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 
 export const CartContext = createContext();
 
-export const CartProvider = ({ children }) => {
+export const CartProvider= ({ children }) => {
  const [cart, setCart] = useState([]);
  const [isOpen, setIsOpen] = useState(false);
 
@@ -16,3 +16,5 @@ export const CartProvider = ({ children }) => {
     </CartContext.Provider>
  );
 };
+
+
