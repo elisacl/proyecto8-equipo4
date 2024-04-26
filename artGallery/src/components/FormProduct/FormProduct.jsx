@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './FormProduct.css';
-// import CardProduct from '../CardProduct/CardProduct';
 import axios from "axios";
 
 const ArtisticsPage = () => {
