@@ -13,15 +13,12 @@ const GeneralGallery = () => {
 
  return (
     <div>
-      
-      {/* <Navbar /> */}
      <Carousel/>
      <Catalogue/> 
        <Modal isOpen={isOpen} onRequestClose={closeModal}>
         <ShoppingCart/>
         
       </Modal> 
-     <Footer/> 
     </div>
  )
 }
