@@ -1,0 +1,152 @@
+/*FORMULARIO*/
+.adminpage-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+  gap: 20px; /* Espacio entre las columnas */
+  justify-content: center;
+  align-items: start;
+  margin-top: 60px;
+}
+.form-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 30px;
+border: none;
+border-radius: 40px;
+width: 300px;
+background-color: #EBEDEA;
+margin:10px;
+padding:50px
+
+}
+.input-container {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.input-name,
+.input-email,
+.input-phone,
+.input-pass {
+border: 1px solid black;
+border-radius: 40px;
+padding: 20px;
+width: 300px;
+height: 35px;
+outline: none;
+box-sizing: border-box;
+}
+.selectadmin {
+border: 1px solid black;
+border-radius: 40px;
+padding: 20px;
+width: 300px;
+height: 35px;
+outline: none;
+box-sizing: border-box;
+}
+.selectadmin option {
+font-family: 'Manrope', sans-serif;
+font-size: 18px;
+}
+.button-form-container {
+display: flex;
+flex-direction: column;
+gap: 30px;
+justify-content: center;
+align-items: center;
+margin-top: 20px
+}
+.button_form {
+font-family: ‘Manrope’, sans-serif;
+background-color: black;
+color: white;
+border: none;
+border-radius: 40px;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+width: 150px;
+height: 50px;
+font-size: 18px;
+transition: background-color 0s;
+}
+.button_form:hover {
+background-color: #b4b4b4;
+color: rgb(0, 0, 0);
+}
+/*TABLA DE USUARIOS*/
+
+
+.tabla_usuarios {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 30px;
+border: none;
+border-radius: 40px;
+background-color: #EBEDEA;
+margin: 15px;
+padding: 10px;
+width: 1000px;
+}
+.tabla_usuarios table {
+width: 100%;
+border-collapse: separate;
+margin: 0;
+}
+.tabla_usuarios table td,
+.tabla_usuarios table th {
+padding: 8px;
+min-height: 50px;
+}
+.tabla_usuarios table tr td:first-child,
+.tabla_usuarios table tr th:first-child {
+border-top-left-radius: 40px;
+border-bottom-left-radius: 40px;
+}
+.tabla_usuarios table tr td:last-child,
+.tabla_usuarios table tr th:last-child {
+border-top-right-radius: 40px;
+border-bottom-right-radius: 40px;
+}
+.tabla_usuarios table tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+.tabla_usuarios table tr:nth-child(odd) {
+background-color: #ffffff;
+}
+.tabla_usuarios table th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #b4b4b4;
+color: white;
+border-radius: 0;
+}
+.botones_admin {
+display: flex;
+gap: 30px;
+margin: 10px;
+}
+.botones_admin_btn {
+border-radius: 40px;
+background-color: #000000;
+border: none;
+color: white;
+text-align: center;
+font-size: 16px;
+cursor: pointer;
+margin: 10px;
+padding: 10px
+}
+.botones_admin_btn:hover {
+background-color: #aeaeae;
+color: black
+}
+
+.user-data{
+  font-family: ‘Manrope’, sans-serif;
+ }
